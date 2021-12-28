@@ -1362,7 +1362,7 @@ input::placeholder {
   z-index: -999;
   width: 100%;
   height: 100%;
-  background: https://cdn.pixabay.com/photo/2014/10/07/13/48/mountain-477832_960_720.jpg;
+  background: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/upwk58813480-wikimedia-image.jpg?w=1000&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&auto=format&ixlib=js-2.2.1&s=17dc5f4b237fcbbf7cf88f198d2798d6);
   background-attachment: local;
   background-position: center;
   -webkit-background-size: cover;
