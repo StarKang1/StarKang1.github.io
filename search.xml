@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Hexo的一些基本操作</title>
+      <link href="/2022/01/15/Hexo%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+      <url>/2022/01/15/Hexo%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
+      
+        <content type="html"><![CDATA[<h1 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h1><p>参考<a href="https://hexo.io/zh-cn/docs/">官方文档</a>,可以执行以下命令来创建一篇新文章、新草稿和新页面。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] (title)</span><br></pre></td></tr></table></figure><p>其中layout是指定文章布局，默认为post，titile为文章名。</p><h2 id="布局（layout）"><a href="#布局（layout）" class="headerlink" title="布局（layout）"></a>布局（layout）</h2><p> Hexo 有三种默认布局：<code>post</code>、<code>page</code> 和 <code>draft</code>。在创建这三种不同类型的文件时，它们将会被保存到不同的路径；而您自定义的其他布局和 <code>post</code> 相同，都将储存到 <code>source/_posts</code> 文件夹。 </p><table><thead><tr><th align="left">布局</th><th align="left">路径</th></tr></thead><tbody><tr><td align="left"><code>post</code></td><td align="left"><code>source/_posts</code></td></tr><tr><td align="left"><code>page</code></td><td align="left"><code>source</code></td></tr><tr><td align="left"><code>draft</code></td><td align="left"><code>source/_drafts</code></td></tr></tbody></table><h3 id="文件名称"><a href="#文件名称" class="headerlink" title="文件名称"></a>文件名称</h3><p>Hexo 默认以标题做为文件名称，但您可编辑 <code>new_post_name</code> 参数来改变默认的文件名称，举例来说，设为 <code>:year-:month-:day-:title.md</code> 可让您更方便的通过日期来管理文章。</p><table><thead><tr><th align="left">变量</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left"><code>:title</code></td><td align="left">标题（小写，空格将会被替换为短杠）</td></tr><tr><td align="left"><code>:year</code></td><td align="left">建立的年份，比如， <code>2015</code></td></tr><tr><td align="left"><code>:month</code></td><td align="left">建立的月份（有前导零），比如， <code>04</code></td></tr><tr><td align="left"><code>:i_month</code></td><td align="left">建立的月份（无前导零），比如， <code>4</code></td></tr><tr><td align="left"><code>:day</code></td><td align="left">建立的日期（有前导零），比如， <code>07</code></td></tr><tr><td align="left"><code>:i_day</code></td><td align="left">建立的日期（无前导零），比如， <code>7</code></td></tr></tbody></table><h3 id="草稿"><a href="#草稿" class="headerlink" title="草稿"></a>草稿</h3><p>刚刚提到了 Hexo 的一种特殊布局：<code>draft</code>，这种布局在建立时会被保存到 <code>source/_drafts</code> 文件夹，您可通过 <code>publish</code> 命令将草稿移动到 <code>source/_posts</code> 文件夹，该命令的使用方式与 <code>new</code> 十分类似，您也可在命令中指定 <code>layout</code> 来指定布局。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo publish [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure><p>草稿默认不会显示在页面中，您可在执行时加上 <code>--draft</code> 参数，或是把 <code>render_drafts</code> 参数设为 <code>true</code> 来预览草稿。</p><h2 id="模版（Scaffold）"><a href="#模版（Scaffold）" class="headerlink" title="模版（Scaffold）"></a>模版（Scaffold）</h2><p>在新建文章时，Hexo 会根据 <code>scaffolds</code> 文件夹内相对应的文件来建立文件，例如：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new photo &quot;My Gallery&quot;</span><br></pre></td></tr></table></figure><p>在执行这行指令时，Hexo 会尝试在 <code>scaffolds</code> 文件夹中寻找 <code>photo.md</code>，并根据其内容建立文章，以下是您可以在模版中使用的变量：</p><table><thead><tr><th align="left">变量</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left"><code>layout</code></td><td align="left">布局</td></tr><tr><td align="left"><code>title</code></td><td align="left">标题</td></tr><tr><td align="left"><code>date</code></td><td align="left">文件建立日期</td></tr></tbody></table><h3 id="支持的格式"><a href="#支持的格式" class="headerlink" title="支持的格式"></a>支持的格式</h3><p>Hexo 支持以任何格式书写文章，只要安装了相应的渲染插件。</p><p>例如，Hexo 默认安装了 <code>hexo-renderer-marked</code> 和 <code>hexo-renderer-ejs</code>，因此你不仅可以用 Markdown 写作，你还可以用 EJS 写作。如果你安装了 <code>hexo-renderer-pug</code>，你甚至可以用 Pug 模板语言书写文章。</p><p>只需要将文章的扩展名从 <code>md</code> 改成 <code>ejs</code>，Hexo 就会使用 <code>hexo-renderer-ejs</code> 渲染这个文件，其他格式同理。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Blog </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2021/12/27/hello-world/"/>
       <url>/2021/12/27/hello-world/</url>
