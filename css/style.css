@@ -32,3 +32,8 @@
   color: #fff;
   background-color: #49b1f5;
 }
+
+/* 花 */
+.card-info-avatar:hover {
+  background: url(https://tenfei03.cfp.cn/creative/vcg/800/new/VCG211151545592.gif);
+} 
