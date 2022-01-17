@@ -1,3 +1,15 @@
+/* 文章页背景 */
+.layout_post>#post {
+  /* 以下代表透明度为0.5 可以自行修改*/
+  background: rgba(255,255,255,.5);
+}
+
+/* 所有页面背景 */
+#aside_content .card-widget, #recent-posts>.recent-post-item, .layout_page>div:first-child:not(.recent-posts), .layout_post>#page, .layout_post>#post, .read-mode .layout_post>#post{
+  /* 以下代表透明度为0.5 */
+  background: rgba(255,255,255,.5);
+}
+
 /* 滚动条 */
 ::-webkit-scrollbar {
   width: 8px;
@@ -33,11 +45,3 @@
   background-color: #49b1f5;
 }
 
-/* 彩带
-.card-info-avatar:hover { <!-- -->
-  background: url(https://cdn.jsdelivr.net/gh/rigodlee/BLOGCDN/img/H3342af90d24b4d62b9bbfec9688ccc25M.gif);
-} */
-/* 花 */
-.card-info-avatar:hover {
-  background: url(https://cdn.jsdelivr.net/gh/rigodlee/BLOGCDN/img/20200530181856.gif);
-}
