@@ -33,7 +33,11 @@
   background-color: #49b1f5;
 }
 
+/* 彩带
+.card-info-avatar:hover { <!-- -->
+  background: url(https://cdn.jsdelivr.net/gh/rigodlee/BLOGCDN/img/H3342af90d24b4d62b9bbfec9688ccc25M.gif);
+} */
 /* 花 */
 .card-info-avatar:hover {
-  background: url(https://tenfei03.cfp.cn/creative/vcg/800/new/VCG211151545592.gif);
-} 
+  background: url(https://cdn.jsdelivr.net/gh/rigodlee/BLOGCDN/img/20200530181856.gif);
+}
