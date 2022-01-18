@@ -1,6 +1,0 @@
-#hexo robots.txt
-User-agent: *
-Allow: /
-
-sitemap: https://starkang1.top/sitemap.xml
-baidusitemap: https://starkang1.top/baidusitemap.xml
