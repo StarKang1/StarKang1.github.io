@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://starkang1.github.io/music/index.html</loc>
+    <loc>https://starkang1.top/music/index.html</loc>
     
     <lastmod>2022-01-17</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://starkang1.github.io/2022/01/15/Hexo%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</loc>
+    <loc>https://starkang1.top/2022/01/15/Hexo%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</loc>
     
     <lastmod>2022-01-16</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://starkang1.github.io/games/index.html</loc>
+    <loc>https://starkang1.top/games/index.html</loc>
     
     <lastmod>2022-01-15</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://starkang1.github.io/books/index.html</loc>
+    <loc>https://starkang1.top/books/index.html</loc>
     
     <lastmod>2022-01-15</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://starkang1.github.io/movies/index.html</loc>
+    <loc>https://starkang1.top/movies/index.html</loc>
     
     <lastmod>2022-01-15</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://starkang1.github.io/link/index.html</loc>
+    <loc>https://starkang1.top/link/index.html</loc>
     
     <lastmod>2022-01-14</lastmod>
     
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>http://starkang1.github.io/tags/index.html</loc>
+    <loc>https://starkang1.top/tags/index.html</loc>
     
     <lastmod>2022-01-14</lastmod>
     
@@ -65,7 +65,7 @@
   </url>
   
   <url>
-    <loc>http://starkang1.github.io/2021/12/27/hello-world/</loc>
+    <loc>https://starkang1.top/2021/12/27/hello-world/</loc>
     
     <lastmod>2022-01-14</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>http://starkang1.github.io/manifest.json</loc>
+    <loc>https://starkang1.top/manifest.json</loc>
     
     <lastmod>2022-01-14</lastmod>
     
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>http://starkang1.github.io/categories/index.html</loc>
+    <loc>https://starkang1.top/categories/index.html</loc>
     
     <lastmod>2022-01-13</lastmod>
     
@@ -92,7 +92,7 @@
   </url>
   
   <url>
-    <loc>http://starkang1.github.io/about/index.html</loc>
+    <loc>https://starkang1.top/about/index.html</loc>
     
     <lastmod>2022-01-13</lastmod>
     
@@ -101,7 +101,7 @@
   </url>
   
   <url>
-    <loc>http://starkang1.github.io/guestbook/index.html</loc>
+    <loc>https://starkang1.top/guestbook/index.html</loc>
     
     <lastmod>2022-01-13</lastmod>
     
@@ -111,7 +111,7 @@
   
 
   <url>
-    <loc>http://starkang1.github.io/</loc>
+    <loc>https://starkang1.top/</loc>
     <lastmod>2022-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -119,14 +119,14 @@
 
   
   <url>
-    <loc>http://starkang1.github.io/tags/Hexo/</loc>
+    <loc>https://starkang1.top/tags/Hexo/</loc>
     <lastmod>2022-01-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://starkang1.github.io/tags/Blog/</loc>
+    <loc>https://starkang1.top/tags/Blog/</loc>
     <lastmod>2022-01-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -135,7 +135,7 @@
 
   
   <url>
-    <loc>http://starkang1.github.io/categories/Hexo/</loc>
+    <loc>https://starkang1.top/categories/Hexo/</loc>
     <lastmod>2022-01-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
