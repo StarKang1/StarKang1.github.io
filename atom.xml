@@ -6,7 +6,7 @@
   <link href="https://starkang1.top/atom.xml" rel="self"/>
   
   <link href="https://starkang1.top/"/>
-  <updated>2022-01-19T09:01:44.647Z</updated>
+  <updated>2022-01-19T09:44:36.748Z</updated>
   <id>https://starkang1.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://starkang1.top/archives/19876/"/>
     <id>https://starkang1.top/archives/19876/</id>
     <published>2022-01-19T06:56:59.000Z</published>
-    <updated>2022-01-19T09:01:44.647Z</updated>
+    <updated>2022-01-19T09:44:36.748Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Git的安装"><a href="#Git的安装" class="headerlink" title="Git的安装"></a>Git的安装</h1><p>参考<a href="https://www.runoob.com/git/git-tutorial.html">Git教程</a></p><h1 id="Node-js安装"><a href="#Node-js安装" class="headerlink" title="Node.js安装"></a>Node.js安装</h1><p>Hexo是基于nodejs编写的，所以需要安装nodejs和nodejs 自带一个被称为 npm的<strong>命令行工具</strong>。</p><p>安装参照<a href="https://www.runoob.com/nodejs/nodejs-install-setup.html">Node.js教程</a>，安装包及源码下载地址<a href="https://nodejs.org/en/download/%E3%80%82">https://nodejs.org/en/download/。</a></p>]]></content>
     
@@ -33,10 +33,12 @@
     
     
     
-    <category term="-HEXO" scheme="https://starkang1.top/categories/HEXO/"/>
+    <category term="HEXO" scheme="https://starkang1.top/categories/HEXO/"/>
     
     
-    <category term="-HEXO -Butterfly" scheme="https://starkang1.top/tags/HEXO-Butterfly/"/>
+    <category term="HEXO" scheme="https://starkang1.top/tags/HEXO/"/>
+    
+    <category term="Butterfly" scheme="https://starkang1.top/tags/Butterfly/"/>
     
   </entry>
   
