@@ -2,18 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://starkang1.top/archives/19876/</loc>
+    <loc>https://starkang1.top/movies/</loc>
     
-    <lastmod>2022-01-19</lastmod>
+    <lastmod>2022-01-21</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://starkang1.top/archives/16107/</loc>
+    <loc>https://starkang1.top/games/</loc>
     
-    <lastmod>2022-01-18</lastmod>
+    <lastmod>2022-01-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://starkang1.top/books/</loc>
+    
+    <lastmod>2022-01-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://starkang1.top/archives/16107/%20books/16107/%20moives/16107/%20games/16107/</loc>
+    
+    <lastmod>2022-01-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://starkang1.top/archives/20067/%20books/20067/%20moives/20067/%20games/20067/</loc>
+    
+    <lastmod>2022-01-21</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -23,33 +50,6 @@
     <loc>https://starkang1.top/music/</loc>
     
     <lastmod>2022-01-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://starkang1.top/games/</loc>
-    
-    <lastmod>2022-01-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://starkang1.top/books/</loc>
-    
-    <lastmod>2022-01-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://starkang1.top/movies/</loc>
-    
-    <lastmod>2022-01-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
