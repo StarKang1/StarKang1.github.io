@@ -112,7 +112,7 @@
 
   <url>
     <loc>https://starkang1.top/</loc>
-    <lastmod>2022-01-19</lastmod>
+    <lastmod>2022-01-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -120,14 +120,14 @@
   
   <url>
     <loc>https://starkang1.top/tags/HEXO/</loc>
-    <lastmod>2022-01-19</lastmod>
+    <lastmod>2022-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://starkang1.top/tags/Butterfly/</loc>
-    <lastmod>2022-01-19</lastmod>
+    <lastmod>2022-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -136,7 +136,7 @@
   
   <url>
     <loc>https://starkang1.top/categories/HEXO/</loc>
-    <lastmod>2022-01-19</lastmod>
+    <lastmod>2022-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
