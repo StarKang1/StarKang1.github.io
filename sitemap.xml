@@ -2,6 +2,69 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://starkang1.top/archives/33756/</loc>
+    
+    <lastmod>2022-01-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://starkang1.top/archives/20067/</loc>
+    
+    <lastmod>2022-01-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://starkang1.top/archives/41926/</loc>
+    
+    <lastmod>2022-01-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://starkang1.top/archives/16107/</loc>
+    
+    <lastmod>2022-01-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://starkang1.top/archives/18760/</loc>
+    
+    <lastmod>2022-01-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://starkang1.top/archives/816/</loc>
+    
+    <lastmod>2022-01-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://starkang1.top/gallery/</loc>
+    
+    <lastmod>2022-01-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://starkang1.top/movies/</loc>
     
     <lastmod>2022-01-21</lastmod>
@@ -21,24 +84,6 @@
   
   <url>
     <loc>https://starkang1.top/books/</loc>
-    
-    <lastmod>2022-01-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://starkang1.top/archives/16107/</loc>
-    
-    <lastmod>2022-01-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://starkang1.top/archives/20067/</loc>
     
     <lastmod>2022-01-21</lastmod>
     
@@ -132,10 +177,45 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://starkang1.top/tags/Hexo/</loc>
+    <lastmod>2022-01-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
-    <loc>https://starkang1.top/categories/HEXO/</loc>
+    <loc>https://starkang1.top/categories/%E4%BD%9C%E5%93%81/</loc>
+    <lastmod>2022-01-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://starkang1.top/categories/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2022-01-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://starkang1.top/categories/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2022-01-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://starkang1.top/categories/%E6%B8%B8%E6%88%8F/</loc>
+    <lastmod>2022-01-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://starkang1.top/categories/%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2022-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
