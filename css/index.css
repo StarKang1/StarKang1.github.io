@@ -3375,7 +3375,7 @@ li.categoryBar-list-item:nth-child(2) {
   background: url('https://w.wallhaven.cc/full/28/wallhaven-281d5y.png');
 }
 li.categoryBar-list-item:nth-child(3) {
-  background: url('https://www.wallpapermaiden.com/image/2022/01/15/nintendo-nes-retro-game-console-technology-47619.jpg');
+  background: url('https://r1.ilikewallpaper.net/iphone-wallpapers/download/75036/The-autumn-iphone-wallpaper-ilikewallpaper_com.jpg');
 }
 li.categoryBar-list-item:nth-child(4) {
   background: url('https://w.wallhaven.cc/full/5w/wallhaven-5wr3m7.jpg');
@@ -3384,22 +3384,22 @@ li.categoryBar-list-item:nth-child(5) {
   background: url('https://w.wallhaven.cc/full/j5/wallhaven-j5ly95.jpg');
 }
 li.categoryBar-list-item:nth-child(6) {
-  background: url('https://w.wallhaven.cc/full/xl/wallhaven-xl32ql.jpg');
+  background: url('https://r1.ilikewallpaper.net/iphone-11-pro-wallpapers/download/4883/Trees-Autumn-iphone-wallpaper-ilikewallpaper_com.jpg');
 }
 li.categoryBar-list-item:nth-child(1)>span::after {
-  content: '学习' !important;
+  content: '作品' !important;
 }
 li.categoryBar-list-item:nth-child(2)>span::after {
-  content: '生活' !important;
+  content: '学习' !important;
 }
 li.categoryBar-list-item:nth-child(3)>span::after {
   content: '游戏' !important;
 }
 li.categoryBar-list-item:nth-child(4)>span::after {
-  content: '练习' !important;
+  content: '生活' !important;
 }
 li.categoryBar-list-item:nth-child(5)>span::after {
-  content: '作品' !important;
+  content: '练习' !important;
 }
 li.categoryBar-list-item:nth-child(6)>span::after {
   content: '随笔' !important;

@@ -4,25 +4,6 @@
   
     
     <entry>
-      <title>英语学习每日一句</title>
-      <link href="/archives/26419/"/>
-      <url>/archives/26419/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> 英语 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>稚晖君HoloCubic复刻</title>
       <link href="/archives/33756/"/>
       <url>/archives/33756/</url>
@@ -87,12 +68,18 @@
         <content type="html"><![CDATA[]]></content>
       
       
+      <categories>
+          
+          <category> 练习 </category>
+          
+      </categories>
+      
       
         <tags>
             
-            <tag> Hexo </tag>
-            
             <tag> Butterfly </tag>
+            
+            <tag> Hexo </tag>
             
         </tags>
       
@@ -117,9 +104,9 @@
       
         <tags>
             
-            <tag> Butterfly </tag>
-            
             <tag> HEXO </tag>
+            
+            <tag> Butterfly </tag>
             
         </tags>
       

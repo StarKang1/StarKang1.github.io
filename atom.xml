@@ -6,7 +6,7 @@
   <link href="https://starkang1.top/atom.xml" rel="self"/>
   
   <link href="https://starkang1.top/"/>
-  <updated>2022-01-21T18:59:02.326Z</updated>
+  <updated>2022-01-22T07:26:49.945Z</updated>
   <id>https://starkang1.top/</id>
   
   <author>
@@ -17,26 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>英语学习每日一句</title>
-    <link href="https://starkang1.top/archives/26419/"/>
-    <id>https://starkang1.top/archives/26419/</id>
-    <published>2022-01-21T18:58:08.000Z</published>
-    <updated>2022-01-21T18:59:02.326Z</updated>
-    
-    
-    
-    
-    <category term="英语" scheme="https://starkang1.top/categories/%E8%8B%B1%E8%AF%AD/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>稚晖君HoloCubic复刻</title>
     <link href="https://starkang1.top/archives/33756/"/>
     <id>https://starkang1.top/archives/33756/</id>
     <published>2022-01-21T18:46:44.000Z</published>
-    <updated>2022-01-21T18:47:48.828Z</updated>
+    <updated>2022-01-22T07:26:49.945Z</updated>
     
     
     
@@ -51,7 +36,7 @@
     <link href="https://starkang1.top/archives/18760/"/>
     <id>https://starkang1.top/archives/18760/</id>
     <published>2022-01-21T18:27:04.000Z</published>
-    <updated>2022-01-21T18:45:30.489Z</updated>
+    <updated>2022-01-22T07:27:10.115Z</updated>
     
     
     
@@ -66,7 +51,7 @@
     <link href="https://starkang1.top/archives/41926/"/>
     <id>https://starkang1.top/archives/41926/</id>
     <published>2022-01-21T18:21:36.000Z</published>
-    <updated>2022-01-21T18:45:43.385Z</updated>
+    <updated>2022-01-22T07:27:14.464Z</updated>
     
     
     
@@ -81,15 +66,17 @@
     <link href="https://starkang1.top/archives/816/"/>
     <id>https://starkang1.top/archives/816/</id>
     <published>2022-01-21T18:18:47.000Z</published>
-    <updated>2022-01-21T18:54:24.327Z</updated>
+    <updated>2022-01-22T07:27:02.777Z</updated>
     
     
     
     
+    <category term="练习" scheme="https://starkang1.top/categories/%E7%BB%83%E4%B9%A0/"/>
     
-    <category term="Hexo" scheme="https://starkang1.top/tags/Hexo/"/>
     
     <category term="Butterfly" scheme="https://starkang1.top/tags/Butterfly/"/>
+    
+    <category term="Hexo" scheme="https://starkang1.top/tags/Hexo/"/>
     
   </entry>
   
@@ -98,7 +85,7 @@
     <link href="https://starkang1.top/archives/20067/"/>
     <id>https://starkang1.top/archives/20067/</id>
     <published>2022-01-19T06:56:59.000Z</published>
-    <updated>2022-01-21T18:45:57.323Z</updated>
+    <updated>2022-01-22T07:27:20.570Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Git的安装"><a href="#Git的安装" class="headerlink" title="Git的安装"></a>Git的安装</h1><p>参考<a href="https://www.runoob.com/git/git-tutorial.html">Git教程</a></p><h1 id="Node-js安装"><a href="#Node-js安装" class="headerlink" title="Node.js安装"></a>Node.js安装</h1><p>Hexo是基于nodejs编写的，所以需要安装nodejs和nodejs 自带一个被称为 npm的<strong>命令行工具</strong>。</p><p>安装参照<a href="https://www.runoob.com/nodejs/nodejs-install-setup.html">Node.js教程</a>，安装包及源码下载地址<a href="https://nodejs.org/en/download/%E3%80%82">https://nodejs.org/en/download/。</a></p>]]></content>
     
@@ -113,9 +100,9 @@
     <category term="作品" scheme="https://starkang1.top/categories/%E4%BD%9C%E5%93%81/"/>
     
     
-    <category term="Butterfly" scheme="https://starkang1.top/tags/Butterfly/"/>
-    
     <category term="HEXO" scheme="https://starkang1.top/tags/HEXO/"/>
+    
+    <category term="Butterfly" scheme="https://starkang1.top/tags/Butterfly/"/>
     
   </entry>
   
@@ -124,7 +111,7 @@
     <link href="https://starkang1.top/archives/16107/"/>
     <id>https://starkang1.top/archives/16107/</id>
     <published>2021-12-27T09:29:09.202Z</published>
-    <updated>2022-01-21T18:45:37.514Z</updated>
+    <updated>2022-01-22T07:27:27.562Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
