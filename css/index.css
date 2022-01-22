@@ -3369,26 +3369,22 @@ span.categoryBar-list-count::after {
   right: -100%;
 }
 li.categoryBar-list-item:nth-child(1) {
-  background: url('https://unpkg.zhimg.com/akilar-candyassets/image/cover1.webp');
+  background: url('https://w.wallhaven.cc/full/z8/wallhaven-z8odwg.jpg');
 }
 li.categoryBar-list-item:nth-child(2) {
-  background: #abcdef;
+  background: url('https://w.wallhaven.cc/full/28/wallhaven-281d5y.png');
 }
 li.categoryBar-list-item:nth-child(3) {
-  background: rgba(45,67,89,0.7);
+  background: url('https://www.wallpapermaiden.com/image/2022/01/15/nintendo-nes-retro-game-console-technology-47619.jpg');
 }
 li.categoryBar-list-item:nth-child(4) {
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.4) 25%, rgba(200,16 , 16, 0) 100%);
-  background: -moz-linear-gradient(rgba(0, 0, 0, 0.4) 25%, rgba(200,16 , 16, 0) 100%);
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.4) 25%, rgba(200,16 , 16, 0) 100%);
-  background: -ms-linear-gradient(rgba(0, 0, 0, 0.4) 25%, rgba(200,16 , 16, 0) 100%);
-  background: linear-gradient(rgba(0, 0, 0, 0.4) 25%, rgba(200,16 , 16, 0) 100%);
+  background: url('https://w.wallhaven.cc/full/5w/wallhaven-5wr3m7.jpg');
 }
 li.categoryBar-list-item:nth-child(5) {
-  background: url('https://unpkg.zhimg.com/akilar-candyassets/image/cover5.webp');
+  background: url('https://w.wallhaven.cc/full/j5/wallhaven-j5ly95.jpg');
 }
 li.categoryBar-list-item:nth-child(6) {
-  background: url('https://unpkg.zhimg.com/akilar-candyassets/image/cover6.webp');
+  background: url('https://w.wallhaven.cc/full/xl/wallhaven-xl32ql.jpg');
 }
 li.categoryBar-list-item:nth-child(1)>span::after {
   content: '学习' !important;
@@ -3400,7 +3396,7 @@ li.categoryBar-list-item:nth-child(3)>span::after {
   content: '游戏' !important;
 }
 li.categoryBar-list-item:nth-child(4)>span::after {
-  content: '英语' !important;
+  content: '练习' !important;
 }
 li.categoryBar-list-item:nth-child(5)>span::after {
   content: '作品' !important;
