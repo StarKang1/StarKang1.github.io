@@ -6,7 +6,7 @@
   <link href="https://starkang1.top/atom.xml" rel="self"/>
   
   <link href="https://starkang1.top/"/>
-  <updated>2022-02-10T17:12:55.830Z</updated>
+  <updated>2022-02-10T17:21:29.079Z</updated>
   <id>https://starkang1.top/</id>
   
   <author>
@@ -17,11 +17,47 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>电影观后感</title>
+    <link href="https://starkang1.top/archives/26957/"/>
+    <id>https://starkang1.top/archives/26957/</id>
+    <published>2022-02-10T17:20:23.000Z</published>
+    <updated>2022-02-10T17:21:29.079Z</updated>
+    
+    
+    
+    
+    <category term="生活" scheme="https://starkang1.top/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="电影" scheme="https://starkang1.top/tags/%E7%94%B5%E5%BD%B1/"/>
+    
+    <category term="生活" scheme="https://starkang1.top/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo博客部署的基本指令</title>
+    <link href="https://starkang1.top/archives/32847/"/>
+    <id>https://starkang1.top/archives/32847/</id>
+    <published>2022-02-10T17:18:20.000Z</published>
+    <updated>2022-02-10T17:21:29.075Z</updated>
+    
+    
+    
+    
+    <category term="笔记" scheme="https://starkang1.top/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="笔记" scheme="https://starkang1.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2021电赛调试记录</title>
     <link href="https://starkang1.top/archives/29673/"/>
     <id>https://starkang1.top/archives/29673/</id>
     <published>2022-02-10T17:08:19.000Z</published>
-    <updated>2022-02-10T17:12:55.830Z</updated>
+    <updated>2022-02-10T17:15:34.047Z</updated>
     
     <content type="html"><![CDATA[<p>三相逆变调板记录2021-8-4<br>1.修改了scope触发通道到第1通道，触发值改大，确保稳定触发看RAM波形。改scope.prescaler值分辨RAM波形是否在刷新。</p><p>2.示波器有50欧内阻那组，接到逆变三相负载电阻会导致三相不平衡，示波器要切到1M欧内阻</p><p>3.AD采样绝对偏移要用软件大低通滤波校正。后续电流采样也要如此校正</p><p>4.大调制比0.95时A相波峰有失真现象，交换相IR2110模块后依旧，怀疑是MOS板问题，用换相法锁定问题位置，信号板、MOS板、IR2110板、电阻板、LC板这5个中的哪一个。</p><p>5.clarke输出alpha,beta取模后，有低频脉动，主要是谐波或三相不对称引起，说明不大适用于反馈闭环，建议用一相的线电压有效值做为反馈闭环控制，展示测量时，要注意用算有效值的那个线电压进行展示测量。<br>用于闭环的反馈线电压要做好深度滤波从而只让基波50Hz进入闭环反馈。有效值脉动大小还有待观测。</p><ol start="6"><li>改SVPWM后，实验电压提高了15%，电阻端相电压看不到马鞍波形，马鞍波形含有3次谐波被差分掉了，如果是相对逆变器地估计能看到马鞍波形。</li></ol><p>7.后续可以提高开关频率或优化死区或优化LC参数，改善失真。提高开关频率时，要注意中断服务函数不要超过开关周期。</p><p>8.要理顺功率板、信号板、换载板的ABC相序对应关系，做好标记。</p><p>三相逆变调板记录2021.08.07</p><p>1.IRF540耐压值100V，在母线电压升至60V，IR2110模块使用20欧驱动电阻尖峰值有可能将其击穿,后续可以替换成IRF640（耐压200V）</p><p>2.电压通过运放的电压跟随器有可能触底，这时候可以采用去除运放，将电压分压并在其输出端接一个反向二极管接入采用口</p><p>3.软件很经常会出现问题，需要及时备份</p><p>4.功率板布线不合理有可能导致测量时出现的尖峰</p><p>5.负载模块带重载的滤波效果可能会比带轻载好</p><p>6.较高电压的线尽量远离较低电压的线，避免出现通信异常</p><p>7.IR2110模块驱动电阻为20欧姆时，上升沿时间大概为0.2us，当其为47欧姆时，上升沿时间大概为0.5us</p><p>8.软件示波器有可能出现错误，这时候先排查硬件问题，再重启软件</p><p>9.在比赛期间测试波形时，尽量测试差分信号，放大为1-2个周期观察波形</p><p>10.将开关频率从16K改成32K时要记得测试中断时间是否够</p><p>11.调试过程中发现电流不正常立马断电检查电路，以免烧板</p><p>12.去掉运放之后的采样电压还未达到饱和，波形就开始失真了</p><p>2021.11.1调试记录<br>1.CSD19535寄生电容大约是IRF640的三倍，因此在同样的RC时间常数情况下，CSD19535需要的驱动电阻大约只需要IRF640的三分之一</p><p>2.RC吸收电路：在MOS管关闭时，C吸收尖峰能量，同时R来消耗，C的大小决定了吸收的大小，如果C过大，意味着R需要消耗的功率也就越大<br>这需要就需要确定合适的RC参数，RC 参数乘积大概在导通时间的三分之一到五分之一，假设，我们选取0.5us的死区时间，那么RC=0.1us，<br>如果选取R=100欧，那么需要的电容就等于102.</p><p>3.关于示波器问题，使用不同的表笔就出来的波形也有点不一样，这就不清楚哪个是真的了</p><p>4.IRF640在带母线测试时，波形的上升沿和上升沿近似相同，上升时间和下降时间也相同，采用IRF640可能是比较好的方案（前提示波器没有问题）</p><p>5.硬件部分，优化了布线，MOS管环路面积要小，VCC-GND-LS，使用RC吸收电路吸收尖峰（尖峰大小也和环路面积有关）</p><p>6.下一步计划：重做信号板，重做功率板，滤波参数确定以及滤波板的重新设计<br>2021.11.2调试记录<br>1.IRF640选择100欧驱动电阻，去掉二极管，加RC吸收尖峰，出来的方波正常</p><p>2021.11.05调试记录<br>1.新增了电压电流保护，触发pwm关闭<br>2.新增了电流采样，电流滤波<br>3.关于软件的克拉克变换与派克变换验证相位正常</p><p>2021.11.06调试记录<br>1.滤波板方向方向导致电流过大，MOS管发热严重<br>2.pwm整流输出稳压方向：三相逆变电流闭环，在完成闭环后，将三相交流电从从负载接入端接入，再将pi给定电流转换为-Id，<br>以及将给定相位用相电压相位替代，这就完成了PWM整流加电流闭环<br>3.在做电流采样板时要注意分压电阻大小以及误差<br>4.霍尔传感器中间绕线，中间电流1A，走线电流为1/3A<br>5.采样电流实际值与标幺值之比为8:1；<br>6.软件调试，上升沿观察-将cnt改为大于0触发，下降沿观察-将cnt改为大于1小于128触发<br>7.AD校正-将占空比给0，观察电压与0点的差值，并将波形校正至零点<br>8.电流校正：将学生电源设置为恒流模式，将导线穿过霍尔传感器，采样电流转换为实际电流的1/3；</p><p>2021.11.11<br>比赛结束了<br>闭环时电压还是掉下来了<br>没有办法，我想可能还是LC参数不匹配<br>当时成功的那一次刚好有1000u的电容，电压上去了，闭环也成功了，这就说明代码没有问题<br>我太慌乱了，我很抱歉，这一点没有想到<br>如果当时可以想到这一点就好了</p><p>2021.12.01<br>比赛结束了，终于实现了电压可调，只是调的范围不大，pi_udc的输出需要限幅，不然会导致输出母线电压过大或者电流过大<br>功率因数也可实现0.92调节至0.99，转换效率暂且还没看，但是基本功能应该是完成了</p>]]></content>
     
@@ -34,7 +70,7 @@
     
     
     
-    <category term="随笔" scheme="https://starkang1.top/categories/%E9%9A%8F%E7%AC%94/"/>
+    <category term="笔记" scheme="https://starkang1.top/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
     <category term="电赛" scheme="https://starkang1.top/tags/%E7%94%B5%E8%B5%9B/"/>
@@ -48,9 +84,9 @@
     <link href="https://starkang1.top/archives/51637/"/>
     <id>https://starkang1.top/archives/51637/</id>
     <published>2022-02-10T07:40:11.000Z</published>
-    <updated>2022-02-10T17:13:12.247Z</updated>
+    <updated>2022-02-10T17:15:38.916Z</updated>
     
-    <content type="html"><![CDATA[<p>git init 在想要创建repositoory的地方点击Git Bash<br>git status 查看变化/状态<br>git add -A 添加<file><br>再次查看状态，提示changes to committed<br>git commit -m”添加你的备注，或者你修改了什么”<br>运行git log可以查看提交记录<br>git diff 查看文件做了哪些变化<br>git checkout – .撤销修改<br>git reset –hard 版本号前7位 执行版本回退<br>git reflog 查看HEAD版本变化<br>再次git reset –hard 最新版本号<br>回到最新的版本<br>git clean -xf 删除没有add的文件</p><p>如果你的文件名是中文的可能会乱码，执行以下代码<br>git config –global i18n.commitencoding utf-8<br>git config –global i18n.logoutputencoding utf-8</p><p>本地git和github的链接<br>1.github注册账号<br>2.配置你的用户和邮箱：git config –global user.name “用户名”<br>           git config –global user.email“邮箱”<br>3.生成ssh key<br>  运行ssh-keygen -t rsa -C”email”<br>  将生成的ssh key复制，执行clip &lt; ~/.ssh/id_rsa.pub<br>4.ssh -T <a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;</a><br>查看是否链接成功<br>5.首次提交 git remote add origin git@你的github库地址<br>6.git push -u origin master 提交<br>去github上就可以看到更新</p>]]></content>
+    <content type="html"><![CDATA[<p>git init 在想要创建repositoory的地方点击Git Bash<br>git status 查看变化/状态<br>git add -A 添加<file><br>再次查看状态，提示changes to committed<br>git commit -m”添加你的备注，或者你修改了什么”<br>运行git log可以查看提交记录<br>git diff 查看文件做了哪些变化<br>git checkout – .撤销修改<br>git reset –hard 版本号前7位 执行版本回退<br>git reflog 查看HEAD版本变化<br>再次git reset –hard 最新版本号<br>回到最新的版本<br>git clean -xf 删除没有add的文件</p><p>如果你的文件名是中文的可能会乱码，执行以下代码<br>git config –global i18n.commitencoding utf-8<br>git config –global i18n.logoutputencoding utf-8</p><p>本地git和github的链接<br>1.github注册账号<br>2.配置你的用户和邮箱：git config –global user.name “用户名”<br>           git config –global user.email“邮箱”<br>3.生成ssh key<br>  运行ssh-keygen -t rsa -C”email”<br>  将生成的ssh key复制，执行clip &lt; ~/.ssh/id_rsa.pub<br>4.ssh -T <a href="mailto:&#103;&#x69;&#x74;&#64;&#103;&#105;&#116;&#x68;&#x75;&#98;&#46;&#x63;&#111;&#109;">&#103;&#x69;&#x74;&#64;&#103;&#105;&#116;&#x68;&#x75;&#98;&#46;&#x63;&#111;&#109;</a><br>查看是否链接成功<br>5.首次提交 git remote add origin git@你的github库地址<br>6.git push -u origin master 提交<br>去github上就可以看到更新</p>]]></content>
     
     
       
@@ -60,7 +96,7 @@
     
     
     
-    <category term="随笔" scheme="https://starkang1.top/categories/%E9%9A%8F%E7%AC%94/"/>
+    <category term="笔记" scheme="https://starkang1.top/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
     <category term="git" scheme="https://starkang1.top/tags/git/"/>
@@ -149,7 +185,7 @@
     <link href="https://starkang1.top/archives/16107/"/>
     <id>https://starkang1.top/archives/16107/</id>
     <published>2021-12-27T09:29:09.202Z</published>
-    <updated>2022-02-10T17:12:51.419Z</updated>
+    <updated>2022-02-10T17:18:22.751Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
@@ -161,7 +197,7 @@
     
     
     
-    <category term="随笔" scheme="https://starkang1.top/categories/%E9%9A%8F%E7%AC%94/"/>
+    <category term="练习" scheme="https://starkang1.top/categories/%E7%BB%83%E4%B9%A0/"/>
     
     
   </entry>
