@@ -6,7 +6,7 @@
   <link href="https://starkang1.top/atom.xml" rel="self"/>
   
   <link href="https://starkang1.top/"/>
-  <updated>2022-02-10T07:41:33.312Z</updated>
+  <updated>2022-02-10T15:26:22.123Z</updated>
   <id>https://starkang1.top/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://starkang1.top/archives/51637/"/>
     <id>https://starkang1.top/archives/51637/</id>
     <published>2022-02-10T07:40:11.000Z</published>
-    <updated>2022-02-10T07:41:33.312Z</updated>
+    <updated>2022-02-10T15:26:22.123Z</updated>
     
-    <content type="html"><![CDATA[<p>git init 在想要创建repositoory的地方点击Git Bash<br>git status 查看变化/状态<br>git add -A 添加<file><br>再次查看状态，提示changes to committed<br>git commit -m”添加你的备注，或者你修改了什么”<br>运行git log可以查看提交记录<br>git diff 查看文件做了哪些变化<br>git checkout – .撤销修改<br>git reset –hard 版本号前7位 执行版本回退<br>git reflog 查看HEAD版本变化<br>再次git reset –hard 最新版本号<br>回到最新的版本<br>git clean -xf 删除没有add的文件</p><p>如果你的文件名是中文的可能会乱码，执行以下代码<br>git config –global i18n.commitencoding utf-8<br>git config –global i18n.logoutputencoding utf-8</p><p>本地git和github的链接<br>1.github注册账号<br>2.配置你的用户和邮箱：git config –global user.name “用户名”<br>           git config –global user.email“邮箱”<br>3.生成ssh key<br>  运行ssh-keygen -t rsa -C”email”<br>  将生成的ssh key复制，执行clip &lt; ~/.ssh/id_rsa.pub<br>4.ssh -T <a href="mailto:&#x67;&#105;&#x74;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#46;&#99;&#111;&#109;">&#x67;&#105;&#x74;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#46;&#99;&#111;&#109;</a><br>查看是否链接成功<br>5.首次提交 git remote add origin git@你的github库地址<br>6.git push -u origin master 提交<br>去github上就可以看到更新</p>]]></content>
+    <content type="html"><![CDATA[<p>git init 在想要创建repositoory的地方点击Git Bash<br>git status 查看变化/状态<br>git add -A 添加<file><br>再次查看状态，提示changes to committed<br>git commit -m”添加你的备注，或者你修改了什么”<br>运行git log可以查看提交记录<br>git diff 查看文件做了哪些变化<br>git checkout – .撤销修改<br>git reset –hard 版本号前7位 执行版本回退<br>git reflog 查看HEAD版本变化<br>再次git reset –hard 最新版本号<br>回到最新的版本<br>git clean -xf 删除没有add的文件</p><p>如果你的文件名是中文的可能会乱码，执行以下代码<br>git config –global i18n.commitencoding utf-8<br>git config –global i18n.logoutputencoding utf-8</p><p>本地git和github的链接<br>1.github注册账号<br>2.配置你的用户和邮箱：git config –global user.name “用户名”<br>           git config –global user.email“邮箱”<br>3.生成ssh key<br>  运行ssh-keygen -t rsa -C”email”<br>  将生成的ssh key复制，执行clip &lt; ~/.ssh/id_rsa.pub<br>4.ssh -T <a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#98;&#46;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#98;&#46;&#x63;&#x6f;&#x6d;</a><br>查看是否链接成功<br>5.首次提交 git remote add origin git@你的github库地址<br>6.git push -u origin master 提交<br>去github上就可以看到更新</p>]]></content>
     
     
       
@@ -34,6 +34,10 @@
     
     
     
+    <category term="随笔" scheme="https://starkang1.top/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="生活" scheme="https://starkang1.top/tags/%E7%94%9F%E6%B4%BB/"/>
+    
   </entry>
   
   <entry>
@@ -41,7 +45,7 @@
     <link href="https://starkang1.top/archives/33756/"/>
     <id>https://starkang1.top/archives/33756/</id>
     <published>2022-01-21T18:46:44.000Z</published>
-    <updated>2022-01-22T07:26:49.945Z</updated>
+    <updated>2022-02-10T07:46:35.483Z</updated>
     
     
     
@@ -102,9 +106,9 @@
     <category term="练习" scheme="https://starkang1.top/categories/%E7%BB%83%E4%B9%A0/"/>
     
     
-    <category term="Butterfly" scheme="https://starkang1.top/tags/Butterfly/"/>
-    
     <category term="Hexo" scheme="https://starkang1.top/tags/Hexo/"/>
+    
+    <category term="Butterfly" scheme="https://starkang1.top/tags/Butterfly/"/>
     
   </entry>
   
@@ -128,9 +132,9 @@
     <category term="作品" scheme="https://starkang1.top/categories/%E4%BD%9C%E5%93%81/"/>
     
     
-    <category term="HEXO" scheme="https://starkang1.top/tags/HEXO/"/>
-    
     <category term="Butterfly" scheme="https://starkang1.top/tags/Butterfly/"/>
+    
+    <category term="HEXO" scheme="https://starkang1.top/tags/HEXO/"/>
     
   </entry>
   
@@ -139,7 +143,7 @@
     <link href="https://starkang1.top/archives/16107/"/>
     <id>https://starkang1.top/archives/16107/</id>
     <published>2021-12-27T09:29:09.202Z</published>
-    <updated>2022-01-22T07:27:27.562Z</updated>
+    <updated>2022-02-10T15:23:00.344Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
