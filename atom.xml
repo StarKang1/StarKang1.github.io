@@ -86,7 +86,7 @@
     <published>2022-02-10T07:40:11.000Z</published>
     <updated>2022-02-10T17:15:38.916Z</updated>
     
-    <content type="html"><![CDATA[<p>git init 在想要创建repositoory的地方点击Git Bash<br>git status 查看变化/状态<br>git add -A 添加<file><br>再次查看状态，提示changes to committed<br>git commit -m”添加你的备注，或者你修改了什么”<br>运行git log可以查看提交记录<br>git diff 查看文件做了哪些变化<br>git checkout – .撤销修改<br>git reset –hard 版本号前7位 执行版本回退<br>git reflog 查看HEAD版本变化<br>再次git reset –hard 最新版本号<br>回到最新的版本<br>git clean -xf 删除没有add的文件</p><p>如果你的文件名是中文的可能会乱码，执行以下代码<br>git config –global i18n.commitencoding utf-8<br>git config –global i18n.logoutputencoding utf-8</p><p>本地git和github的链接<br>1.github注册账号<br>2.配置你的用户和邮箱：git config –global user.name “用户名”<br>           git config –global user.email“邮箱”<br>3.生成ssh key<br>  运行ssh-keygen -t rsa -C”email”<br>  将生成的ssh key复制，执行clip &lt; ~/.ssh/id_rsa.pub<br>4.ssh -T <a href="mailto:&#103;&#105;&#116;&#64;&#x67;&#105;&#116;&#x68;&#117;&#x62;&#x2e;&#x63;&#111;&#x6d;">&#103;&#105;&#116;&#64;&#x67;&#105;&#116;&#x68;&#117;&#x62;&#x2e;&#x63;&#111;&#x6d;</a><br>查看是否链接成功<br>5.首次提交 git remote add origin git@你的github库地址<br>6.git push -u origin master 提交<br>去github上就可以看到更新</p>]]></content>
+    <content type="html"><![CDATA[<p>git init 在想要创建repositoory的地方点击Git Bash<br>git status 查看变化/状态<br>git add -A 添加<file><br>再次查看状态，提示changes to committed<br>git commit -m”添加你的备注，或者你修改了什么”<br>运行git log可以查看提交记录<br>git diff 查看文件做了哪些变化<br>git checkout – .撤销修改<br>git reset –hard 版本号前7位 执行版本回退<br>git reflog 查看HEAD版本变化<br>再次git reset –hard 最新版本号<br>回到最新的版本<br>git clean -xf 删除没有add的文件</p><p>如果你的文件名是中文的可能会乱码，执行以下代码<br>git config –global i18n.commitencoding utf-8<br>git config –global i18n.logoutputencoding utf-8</p><p>本地git和github的链接<br>1.github注册账号<br>2.配置你的用户和邮箱：git config –global user.name “用户名”<br>           git config –global user.email“邮箱”<br>3.生成ssh key<br>  运行ssh-keygen -t rsa -C”email”<br>  将生成的ssh key复制，执行clip &lt; ~/.ssh/id_rsa.pub<br>4.ssh -T <a href="mailto:&#103;&#x69;&#x74;&#x40;&#103;&#105;&#116;&#104;&#117;&#x62;&#46;&#99;&#111;&#x6d;">&#103;&#x69;&#x74;&#x40;&#103;&#105;&#116;&#104;&#117;&#x62;&#46;&#99;&#111;&#x6d;</a><br>查看是否链接成功<br>5.首次提交 git remote add origin git@你的github库地址<br>6.git push -u origin master 提交<br>去github上就可以看到更新</p>]]></content>
     
     
       
@@ -148,9 +148,9 @@
     <category term="练习" scheme="https://starkang1.top/categories/%E7%BB%83%E4%B9%A0/"/>
     
     
-    <category term="Butterfly" scheme="https://starkang1.top/tags/Butterfly/"/>
-    
     <category term="Hexo" scheme="https://starkang1.top/tags/Hexo/"/>
+    
+    <category term="Butterfly" scheme="https://starkang1.top/tags/Butterfly/"/>
     
   </entry>
   
@@ -174,9 +174,9 @@
     <category term="作品" scheme="https://starkang1.top/categories/%E4%BD%9C%E5%93%81/"/>
     
     
-    <category term="HEXO" scheme="https://starkang1.top/tags/HEXO/"/>
-    
     <category term="Butterfly" scheme="https://starkang1.top/tags/Butterfly/"/>
+    
+    <category term="HEXO" scheme="https://starkang1.top/tags/HEXO/"/>
     
   </entry>
   
