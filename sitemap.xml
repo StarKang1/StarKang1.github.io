@@ -191,6 +191,20 @@
 
   
   <url>
+    <loc>https://starkang1.top/tags/%E7%94%B5%E8%B5%9B/</loc>
+    <lastmod>2022-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://starkang1.top/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2022-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://starkang1.top/tags/Hexo/</loc>
     <lastmod>2022-02-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -212,14 +226,14 @@
   </url>
   
   <url>
-    <loc>https://starkang1.top/tags/%E7%94%B5%E8%B5%9B/</loc>
+    <loc>https://starkang1.top/tags/git/</loc>
     <lastmod>2022-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://starkang1.top/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://starkang1.top/tags/%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/</loc>
     <lastmod>2022-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -239,21 +253,14 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>https://starkang1.top/tags/git/</loc>
-    <lastmod>2022-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://starkang1.top/tags/%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/</loc>
-    <lastmod>2022-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
+  
+  <url>
+    <loc>https://starkang1.top/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2022-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
   <url>
     <loc>https://starkang1.top/categories/%E7%BB%83%E4%B9%A0/</loc>
@@ -270,7 +277,7 @@
   </url>
   
   <url>
-    <loc>https://starkang1.top/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://starkang1.top/categories/%E6%B8%B8%E6%88%8F/</loc>
     <lastmod>2022-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -285,13 +292,6 @@
   
   <url>
     <loc>https://starkang1.top/categories/%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2022-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://starkang1.top/categories/%E6%B8%B8%E6%88%8F/</loc>
     <lastmod>2022-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
