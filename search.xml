@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>厦门之旅</title>
+      <link href="/archives/11992/"/>
+      <url>/archives/11992/</url>
+      
+        <content type="html"><![CDATA[<p>在前往厦门的过程中是满怀期待的，到了这个城市才发现和自己的家乡发展差距这么大，不禁感慨，外面世界的真的很繁华，缩在自己的小世界，眼界真的会逐渐变窄，身边的人也逐渐有了自己的目标，而我还在迷茫与焦虑中饱受折磨，不如就先踏出一步，开始自己的第一次也是最后一次的考研备考，当然，我是非常希望我可以坚持住，加油吧！下面是我拍的一些照片，有点遗憾的是我们本来是奔着厦门蓝眼泪去的，由于时间太紧张了，没有看到这种大自然的景象，只能下次去弥补这一次的遗憾。</p><p><img src="https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/ad544955d098f90545fefd363990c08.jpg"></p><p><img src="https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/47253b0d3f582302f05c03d4bd6be3d.jpg"></p><p><img src="https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/5051a9f10c5430cf8050e0f32aee331.jpg"></p><p><img src="https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/432ca9075247e0d5d342c7ee0fb9a25.jpg"></p><p><img src="https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/109b9adb55d5ec596f4d8f9af0d2154.jpg"></p><p><img src="https://gitee.com/xu-weijian/pic-go/raw/master/img/2371065398db1e5d3d43066d86b217b.jpg"></p><p><img src="https://gitee.com/xu-weijian/pic-go/raw/master/img/f9c5b029ab7852c22c048cbf1694b16.jpg"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 旅行 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>电影观后感</title>
       <link href="/archives/26957/"/>
       <url>/archives/26957/</url>
@@ -87,7 +112,7 @@
       <link href="/archives/51637/"/>
       <url>/archives/51637/</url>
       
-        <content type="html"><![CDATA[<p>git init 在想要创建repositoory的地方点击Git Bash<br>git status 查看变化/状态<br>git add -A 添加<file><br>再次查看状态，提示changes to committed<br>git commit -m”添加你的备注，或者你修改了什么”<br>运行git log可以查看提交记录<br>git diff 查看文件做了哪些变化<br>git checkout – .撤销修改<br>git reset –hard 版本号前7位 执行版本回退<br>git reflog 查看HEAD版本变化<br>再次git reset –hard 最新版本号<br>回到最新的版本<br>git clean -xf 删除没有add的文件</p><p>如果你的文件名是中文的可能会乱码，执行以下代码<br>git config –global i18n.commitencoding utf-8<br>git config –global i18n.logoutputencoding utf-8</p><p>本地git和github的链接<br>1.github注册账号<br>2.配置你的用户和邮箱：git config –global user.name “用户名”<br>           git config –global user.email“邮箱”<br>3.生成ssh key<br>  运行ssh-keygen -t rsa -C”email”<br>  将生成的ssh key复制，执行clip &lt; ~/.ssh/id_rsa.pub<br>4.ssh -T <a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#46;&#99;&#x6f;&#109;">&#103;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#46;&#99;&#x6f;&#109;</a><br>查看是否链接成功<br>5.首次提交 git remote add origin git@你的github库地址<br>6.git push -u origin master 提交<br>去github上就可以看到更新</p>]]></content>
+        <content type="html"><![CDATA[<p>git init 在想要创建repositoory的地方点击Git Bash<br>git status 查看变化/状态<br>git add -A 添加<file><br>再次查看状态，提示changes to committed<br>git commit -m”添加你的备注，或者你修改了什么”<br>运行git log可以查看提交记录<br>git diff 查看文件做了哪些变化<br>git checkout – .撤销修改<br>git reset –hard 版本号前7位 执行版本回退<br>git reflog 查看HEAD版本变化<br>再次git reset –hard 最新版本号<br>回到最新的版本<br>git clean -xf 删除没有add的文件</p><p>如果你的文件名是中文的可能会乱码，执行以下代码<br>git config –global i18n.commitencoding utf-8<br>git config –global i18n.logoutputencoding utf-8</p><p>本地git和github的链接<br>1.github注册账号<br>2.配置你的用户和邮箱：git config –global user.name “用户名”<br>           git config –global user.email“邮箱”<br>3.生成ssh key<br>  运行ssh-keygen -t rsa -C”email”<br>  将生成的ssh key复制，执行clip &lt; ~/.ssh/id_rsa.pub<br>4.ssh -T <a href="mailto:&#x67;&#x69;&#x74;&#x40;&#x67;&#105;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#109;">&#x67;&#x69;&#x74;&#x40;&#x67;&#105;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#109;</a><br>查看是否链接成功<br>5.首次提交 git remote add origin git@你的github库地址<br>6.git push -u origin master 提交<br>去github上就可以看到更新</p>]]></content>
       
       
       <categories>
