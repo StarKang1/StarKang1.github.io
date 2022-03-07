@@ -1,0 +1,1403 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>初始C++ | Way-Jay's Blog</title><meta name="keywords" content="C/C++"><meta name="author" content="Way Jay"><meta name="copyright" content="Way Jay"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="C++课程学习笔记第一阶段：C++基础语法入门1.变量存在的意义：方便管理内存空间 变量创建的语法： 数据类型 变量名 &#x3D;变量初始值 例如 int a &#x3D;10；&#x2F;&#x2F;变量初始化 2.常量作用：用于记录程序中不可更改的数据 1.#define宏常量 2.const修饰的变量 3.关键字如int float long double  变量取名要避免与关键字重复 4.标识符命名规则作用：C++ 规定给标识">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初始C++">
+<meta property="og:url" content="https://starkang1.top/archives/43028/">
+<meta property="og:site_name" content="Way-Jay&#39;s Blog">
+<meta property="og:description" content="C++课程学习笔记第一阶段：C++基础语法入门1.变量存在的意义：方便管理内存空间 变量创建的语法： 数据类型 变量名 &#x3D;变量初始值 例如 int a &#x3D;10；&#x2F;&#x2F;变量初始化 2.常量作用：用于记录程序中不可更改的数据 1.#define宏常量 2.const修饰的变量 3.关键字如int float long double  变量取名要避免与关键字重复 4.标识符命名规则作用：C++ 规定给标识">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://w.wallhaven.cc/full/6o/wallhaven-6o7md7.jpg">
+<meta property="article:published_time" content="2022-02-24T05:07:41.000Z">
+<meta property="article:modified_time" content="2022-03-01T16:01:59.979Z">
+<meta property="article:author" content="Way Jay">
+<meta property="article:tag" content="C&#x2F;C++">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://w.wallhaven.cc/full/6o/wallhaven-6o7md7.jpg"><link rel="shortcut icon" href="/img/3.png"><link rel="canonical" href="https://starkang1.top/archives/43028/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="baidu-site-verification" content="code-mH33sf3eP9"/><link rel="manifest" href="/img/pwa/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/img/pwa/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/pwa/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/pwa/16.png"/><link rel="mask-icon" href="/img/pwa/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ea34b0155831621baa993ef51ab386f9";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Way Jay","link":"链接: ","source":"来源: Way-Jay's Blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '初始C++',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-03-02 00:01:59'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><style type="text/css">.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body{left:-66px!important}.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover{left:0!important}</style><link rel="stylesheet" href="/css/iconfont.css"><link rel="stylesheet" href="/css/background.css"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/dist/APlayer.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="Way-Jay's Blog" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="wizard-scene"><div class="wizard-objects"><div class="wizard-square"></div><div class="wizard-circle"></div><div class="wizard-triangle"></div></div><div class="wizard"><div class="wizard-body"></div><div class="wizard-right-arm"><div class="wizard-right-hand"></div></div><div class="wizard-left-arm"><div class="wizard-left-hand"></div></div><div class="wizard-head"><div class="wizard-beard"></div><div class="wizard-face"><div class="wizard-adds"></div></div><div class="wizard-hat"><div class="wizard-hat-of-the-hat"></div><div class="wizard-four-point-star --first"></div><div class="wizard-four-point-star --second"></div><div class="wizard-four-point-star --third"></div></div></div></div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.wxcha.com/file/201808/31/9b99c1b0d7.jpg?down" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-shouye"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-navicon-wzgl"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw iconfont icon-ziyuanxhdpi"></i><span> 日志</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw iconfont icon-24gl-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw iconfont icon-24gl-folderOpen"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-xiuxiankafeiyule"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw iconfont icon-vynil"></i><span> 歌单</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw iconfont icon-dianying1"></i><span> 电影</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw iconfont icon-yuedu1"></i><span> 阅读</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw iconfont icon-youxi"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw iconfont icon-tukuxiangce"></i><span> 图库</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 其他</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw iconfont icon-lianjie"></i><span> 友链</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw iconfonnt icon-guanyu1"></i><span> 关于</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/guestbook/"><i class="fa-fw iconfont icon-liuyanban-05"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://w.wallhaven.cc/full/6o/wallhaven-6o7md7.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Way-Jay's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-shouye"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-navicon-wzgl"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw iconfont icon-ziyuanxhdpi"></i><span> 日志</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw iconfont icon-24gl-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw iconfont icon-24gl-folderOpen"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-xiuxiankafeiyule"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw iconfont icon-vynil"></i><span> 歌单</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw iconfont icon-dianying1"></i><span> 电影</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw iconfont icon-yuedu1"></i><span> 阅读</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw iconfont icon-youxi"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw iconfont icon-tukuxiangce"></i><span> 图库</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 其他</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw iconfont icon-lianjie"></i><span> 友链</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw iconfonnt icon-guanyu1"></i><span> 关于</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/guestbook/"><i class="fa-fw iconfont icon-liuyanban-05"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">初始C++</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-02-24T05:07:41.000Z" title="发表于 2022-02-24 13:07:41">2022-02-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-01T16:01:59.979Z" title="更新于 2022-03-02 00:01:59">2022-03-02</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>11分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="初始C++"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="C-课程学习笔记"><a href="#C-课程学习笔记" class="headerlink" title="C++课程学习笔记"></a>C++课程学习笔记</h1><h2 id="第一阶段：C-基础语法入门"><a href="#第一阶段：C-基础语法入门" class="headerlink" title="第一阶段：C++基础语法入门"></a>第一阶段：C++基础语法入门</h2><h3 id="1-变量"><a href="#1-变量" class="headerlink" title="1.变量"></a>1.变量</h3><p>存在的意义：方便管理内存空间</p>
+<p>变量创建的语法： 数据类型 变量名 =变量初始值</p>
+<p>例如 int a =10；//变量初始化</p>
+<h3 id="2-常量"><a href="#2-常量" class="headerlink" title="2.常量"></a>2.常量</h3><p>作用：用于记录程序中不可更改的数据</p>
+<p>1.#define宏常量</p>
+<p>2.const修饰的变量</p>
+<h3 id="3-关键字"><a href="#3-关键字" class="headerlink" title="3.关键字"></a>3.关键字</h3><p>如int float long double </p>
+<p>变量取名要避免与关键字重复</p>
+<h3 id="4-标识符命名规则"><a href="#4-标识符命名规则" class="headerlink" title="4.标识符命名规则"></a>4.标识符命名规则</h3><p>作用：C++ 规定给标识符（变量、常量）命名时，有一套规则</p>
+<p>**1.**标识符不能是关键字</p>
+<p>**2.**第一个标识符必须为字母或下划线</p>
+<p>**3.**标识符字母区分大小写</p>
+<p>建议取名采用驼峰命名法</p>
+<h3 id="5-数据类型"><a href="#5-数据类型" class="headerlink" title="5.数据类型"></a>5.数据类型</h3><h4 id="1-整型"><a href="#1-整型" class="headerlink" title="1.整型"></a>1.整型</h4><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/xu-weijian/pic-go/raw/master/img/~0QM3$CQ$8VTDRU~E5TO7EL.png"></p>
+<p>可以利用size of求出数据类型占用内存多大</p>
+<p>例如short num1 =10；</p>
+<p>cout &lt;&lt; “short占用内存空间为： “ &lt;&lt; sizeof(num) &lt;&lt; end1;</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/xu-weijian/pic-go/raw/master/img/RAK9VEVYUUW%7BH%7D_3NWA8[GL.png"></p>
+<h4 id="2-实型"><a href="#2-实型" class="headerlink" title="2.实型"></a>2.实型</h4><p>1.单精度实型float</p>
+<p>2.双精度实型double</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/xu-weijian/pic-go/raw/master/img/9~((LDI%5BSC6E%7D%7D5JT)@$GSG.png"></p>
+<h4 id="3-字符型"><a href="#3-字符型" class="headerlink" title="3.字符型"></a>3.字符型</h4><p>作用：字符型变量用于显示单个字符</p>
+<p>语法：char ch = ‘a’;</p>
+<p>C和C++中字符型变量☞占用1个字节</p>
+<p>字符型变量不是把字符本身放到内存存储，而是将对应的ASCIII编码放入到存储单元</p>
+<p>char只占一个字节</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://gitee.com/xu-weijian/pic-go/raw/master/img/BHFG18ESC2MTWZ@U@CGF~4Y.png"></p>
+<p>ASCII码表</p>
+<table>
+<thead>
+<tr>
+<th>二进制</th>
+<th>十进制</th>
+<th>十六进制</th>
+<th>字符/缩写</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>00000000</td>
+<td>0</td>
+<td>00</td>
+<td>NUL (NULL)</td>
+</tr>
+<tr>
+<td>00000001</td>
+<td>1</td>
+<td>01</td>
+<td>SOH (Start Of Headling)</td>
+</tr>
+<tr>
+<td>00000010</td>
+<td>2</td>
+<td>02</td>
+<td>STX (Start Of Text)</td>
+</tr>
+<tr>
+<td>00000011</td>
+<td>3</td>
+<td>03</td>
+<td>ETX (End Of Text)</td>
+</tr>
+<tr>
+<td>00000100</td>
+<td>4</td>
+<td>04</td>
+<td>EOT (End Of Transmission)</td>
+</tr>
+<tr>
+<td>00000101</td>
+<td>5</td>
+<td>05</td>
+<td>ENQ (Enquiry)</td>
+</tr>
+<tr>
+<td>00000110</td>
+<td>6</td>
+<td>06</td>
+<td>ACK (Acknowledge)</td>
+</tr>
+<tr>
+<td>00000111</td>
+<td>7</td>
+<td>07</td>
+<td>BEL (Bell)</td>
+</tr>
+<tr>
+<td>00001000</td>
+<td>8</td>
+<td>08</td>
+<td>BS (Backspace)</td>
+</tr>
+<tr>
+<td>00001001</td>
+<td>9</td>
+<td>09</td>
+<td>HT (Horizontal Tab)</td>
+</tr>
+<tr>
+<td>00001010</td>
+<td>10</td>
+<td>0A</td>
+<td>LF/NL(Line Feed/New Line)</td>
+</tr>
+<tr>
+<td>00001011</td>
+<td>11</td>
+<td>0B</td>
+<td>VT (Vertical Tab)</td>
+</tr>
+<tr>
+<td>00001100</td>
+<td>12</td>
+<td>0C</td>
+<td>FF/NP (Form Feed/New Page)</td>
+</tr>
+<tr>
+<td>00001101</td>
+<td>13</td>
+<td>0D</td>
+<td>CR (Carriage Return)</td>
+</tr>
+<tr>
+<td>00001110</td>
+<td>14</td>
+<td>0E</td>
+<td>SO (Shift Out)</td>
+</tr>
+<tr>
+<td>00001111</td>
+<td>15</td>
+<td>0F</td>
+<td>SI (Shift In)</td>
+</tr>
+<tr>
+<td>00010000</td>
+<td>16</td>
+<td>10</td>
+<td>DLE (Data Link Escape)</td>
+</tr>
+<tr>
+<td>00010001</td>
+<td>17</td>
+<td>11</td>
+<td>DC1/XON (Device Control 1/Transmission On)</td>
+</tr>
+<tr>
+<td>00010010</td>
+<td>18</td>
+<td>12</td>
+<td>DC2 (Device Control 2)</td>
+</tr>
+<tr>
+<td>00010011</td>
+<td>19</td>
+<td>13</td>
+<td>DC3/XOFF (Device Control 3/Transmission Off)</td>
+</tr>
+<tr>
+<td>00010100</td>
+<td>20</td>
+<td>14</td>
+<td>DC4 (Device Control 4)</td>
+</tr>
+<tr>
+<td>00010101</td>
+<td>21</td>
+<td>15</td>
+<td>NAK (Negative Acknowledge)</td>
+</tr>
+<tr>
+<td>00010110</td>
+<td>22</td>
+<td>16</td>
+<td>SYN (Synchronous Idle)</td>
+</tr>
+<tr>
+<td>00010111</td>
+<td>23</td>
+<td>17</td>
+<td>ETB (End of Transmission Block)</td>
+</tr>
+<tr>
+<td>00011000</td>
+<td>24</td>
+<td>18</td>
+<td>CAN (Cancel)</td>
+</tr>
+<tr>
+<td>00011001</td>
+<td>25</td>
+<td>19</td>
+<td>EM (End of Medium)</td>
+</tr>
+<tr>
+<td>00011010</td>
+<td>26</td>
+<td>1A</td>
+<td>SUB (Substitute)</td>
+</tr>
+<tr>
+<td>00011011</td>
+<td>27</td>
+<td>1B</td>
+<td>ESC (Escape)</td>
+</tr>
+<tr>
+<td>00011100</td>
+<td>28</td>
+<td>1C</td>
+<td>FS (File Separator)</td>
+</tr>
+<tr>
+<td>00011101</td>
+<td>29</td>
+<td>1D</td>
+<td>GS (Group Separator)</td>
+</tr>
+<tr>
+<td>00011110</td>
+<td>30</td>
+<td>1E</td>
+<td>RS (Record Separator)</td>
+</tr>
+<tr>
+<td>00011111</td>
+<td>31</td>
+<td>1F</td>
+<td>US (Unit Separator)</td>
+</tr>
+<tr>
+<td>00100000</td>
+<td>32</td>
+<td>20</td>
+<td>(Space)</td>
+</tr>
+<tr>
+<td>00100001</td>
+<td>33</td>
+<td>21</td>
+<td>!</td>
+</tr>
+<tr>
+<td>00100010</td>
+<td>34</td>
+<td>22</td>
+<td>“</td>
+</tr>
+<tr>
+<td>00100011</td>
+<td>35</td>
+<td>23</td>
+<td>#</td>
+</tr>
+<tr>
+<td>00100100</td>
+<td>36</td>
+<td>24</td>
+<td>$</td>
+</tr>
+<tr>
+<td>00100101</td>
+<td>37</td>
+<td>25</td>
+<td>%</td>
+</tr>
+<tr>
+<td>00100110</td>
+<td>38</td>
+<td>26</td>
+<td>&amp;</td>
+</tr>
+<tr>
+<td>00100111</td>
+<td>39</td>
+<td>27</td>
+<td>‘</td>
+</tr>
+<tr>
+<td>00101000</td>
+<td>40</td>
+<td>28</td>
+<td>(</td>
+</tr>
+<tr>
+<td>00101001</td>
+<td>41</td>
+<td>29</td>
+<td>)</td>
+</tr>
+<tr>
+<td>00101010</td>
+<td>42</td>
+<td>2A</td>
+<td>*</td>
+</tr>
+<tr>
+<td>00101011</td>
+<td>43</td>
+<td>2B</td>
+<td>+</td>
+</tr>
+<tr>
+<td>00101100</td>
+<td>44</td>
+<td>2C</td>
+<td>,</td>
+</tr>
+<tr>
+<td>00101101</td>
+<td>45</td>
+<td>2D</td>
+<td>-</td>
+</tr>
+<tr>
+<td>00101110</td>
+<td>46</td>
+<td>2E</td>
+<td>.</td>
+</tr>
+<tr>
+<td>00101111</td>
+<td>47</td>
+<td>2F</td>
+<td>/</td>
+</tr>
+<tr>
+<td>00110000</td>
+<td>48</td>
+<td>30</td>
+<td>0</td>
+</tr>
+<tr>
+<td>00110001</td>
+<td>49</td>
+<td>31</td>
+<td>1</td>
+</tr>
+<tr>
+<td>00110010</td>
+<td>50</td>
+<td>32</td>
+<td>2</td>
+</tr>
+<tr>
+<td>00110011</td>
+<td>51</td>
+<td>33</td>
+<td>3</td>
+</tr>
+<tr>
+<td>00110100</td>
+<td>52</td>
+<td>34</td>
+<td>4</td>
+</tr>
+<tr>
+<td>00110101</td>
+<td>53</td>
+<td>35</td>
+<td>5</td>
+</tr>
+<tr>
+<td>00110110</td>
+<td>54</td>
+<td>36</td>
+<td>6</td>
+</tr>
+<tr>
+<td>00110111</td>
+<td>55</td>
+<td>37</td>
+<td>7</td>
+</tr>
+<tr>
+<td>00111000</td>
+<td>56</td>
+<td>38</td>
+<td>8</td>
+</tr>
+<tr>
+<td>00111001</td>
+<td>57</td>
+<td>39</td>
+<td>9</td>
+</tr>
+<tr>
+<td>00111010</td>
+<td>58</td>
+<td>3A</td>
+<td>:</td>
+</tr>
+<tr>
+<td>00111011</td>
+<td>59</td>
+<td>3B</td>
+<td>;</td>
+</tr>
+<tr>
+<td>00111100</td>
+<td>60</td>
+<td>3C</td>
+<td>&lt;</td>
+</tr>
+<tr>
+<td>00111101</td>
+<td>61</td>
+<td>3D</td>
+<td>=</td>
+</tr>
+<tr>
+<td>00111110</td>
+<td>62</td>
+<td>3E</td>
+<td>&gt;</td>
+</tr>
+<tr>
+<td>00111111</td>
+<td>63</td>
+<td>3F</td>
+<td>?</td>
+</tr>
+<tr>
+<td>01000000</td>
+<td>64</td>
+<td>40</td>
+<td>@</td>
+</tr>
+<tr>
+<td>01000001</td>
+<td>65</td>
+<td>41</td>
+<td>A</td>
+</tr>
+<tr>
+<td>01000010</td>
+<td>66</td>
+<td>42</td>
+<td>B</td>
+</tr>
+<tr>
+<td>01000011</td>
+<td>67</td>
+<td>43</td>
+<td>C</td>
+</tr>
+<tr>
+<td>01000100</td>
+<td>68</td>
+<td>44</td>
+<td>D</td>
+</tr>
+<tr>
+<td>01000101</td>
+<td>69</td>
+<td>45</td>
+<td>E</td>
+</tr>
+<tr>
+<td>01000110</td>
+<td>70</td>
+<td>46</td>
+<td>F</td>
+</tr>
+<tr>
+<td>01000111</td>
+<td>71</td>
+<td>47</td>
+<td>G</td>
+</tr>
+<tr>
+<td>01001000</td>
+<td>72</td>
+<td>48</td>
+<td>H</td>
+</tr>
+<tr>
+<td>01001001</td>
+<td>73</td>
+<td>49</td>
+<td>I</td>
+</tr>
+<tr>
+<td>01001010</td>
+<td>74</td>
+<td>4A</td>
+<td>J</td>
+</tr>
+<tr>
+<td>01001011</td>
+<td>75</td>
+<td>4B</td>
+<td>K</td>
+</tr>
+<tr>
+<td>01001100</td>
+<td>76</td>
+<td>4C</td>
+<td>L</td>
+</tr>
+<tr>
+<td>01001101</td>
+<td>77</td>
+<td>4D</td>
+<td>M</td>
+</tr>
+<tr>
+<td>01001110</td>
+<td>78</td>
+<td>4E</td>
+<td>N</td>
+</tr>
+<tr>
+<td>01001111</td>
+<td>79</td>
+<td>4F</td>
+<td>O</td>
+</tr>
+<tr>
+<td>01010000</td>
+<td>80</td>
+<td>50</td>
+<td>P</td>
+</tr>
+<tr>
+<td>01010001</td>
+<td>81</td>
+<td>51</td>
+<td>Q</td>
+</tr>
+<tr>
+<td>01010010</td>
+<td>82</td>
+<td>52</td>
+<td>R</td>
+</tr>
+<tr>
+<td>01010011</td>
+<td>83</td>
+<td>53</td>
+<td>S</td>
+</tr>
+<tr>
+<td>01010100</td>
+<td>84</td>
+<td>54</td>
+<td>T</td>
+</tr>
+<tr>
+<td>01010101</td>
+<td>85</td>
+<td>55</td>
+<td>U</td>
+</tr>
+<tr>
+<td>01010110</td>
+<td>86</td>
+<td>56</td>
+<td>V</td>
+</tr>
+<tr>
+<td>01010111</td>
+<td>87</td>
+<td>57</td>
+<td>W</td>
+</tr>
+<tr>
+<td>01011000</td>
+<td>88</td>
+<td>58</td>
+<td>X</td>
+</tr>
+<tr>
+<td>01011001</td>
+<td>89</td>
+<td>59</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>01011010</td>
+<td>90</td>
+<td>5A</td>
+<td>Z</td>
+</tr>
+<tr>
+<td>01011011</td>
+<td>91</td>
+<td>5B</td>
+<td>[</td>
+</tr>
+<tr>
+<td>01011100</td>
+<td>92</td>
+<td>5C</td>
+<td>\</td>
+</tr>
+<tr>
+<td>01011101</td>
+<td>93</td>
+<td>5D</td>
+<td>]</td>
+</tr>
+<tr>
+<td>01011110</td>
+<td>94</td>
+<td>5E</td>
+<td>^</td>
+</tr>
+<tr>
+<td>01011111</td>
+<td>95</td>
+<td>5F</td>
+<td>_</td>
+</tr>
+<tr>
+<td>01100000</td>
+<td>96</td>
+<td>60</td>
+<td>`</td>
+</tr>
+<tr>
+<td>01100001</td>
+<td>97</td>
+<td>61</td>
+<td>a</td>
+</tr>
+</tbody></table>
+<p>余下部分</p>
+<table>
+<thead>
+<tr>
+<th>1100010</th>
+<th>98</th>
+<th>62</th>
+<th>b</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1100011</td>
+<td>99</td>
+<td>63</td>
+<td>c</td>
+</tr>
+<tr>
+<td>1100100</td>
+<td>100</td>
+<td>64</td>
+<td>d</td>
+</tr>
+<tr>
+<td>1100101</td>
+<td>101</td>
+<td>65</td>
+<td>e</td>
+</tr>
+<tr>
+<td>1100110</td>
+<td>102</td>
+<td>66</td>
+<td>f</td>
+</tr>
+<tr>
+<td>1100111</td>
+<td>103</td>
+<td>67</td>
+<td>g</td>
+</tr>
+<tr>
+<td>1101000</td>
+<td>104</td>
+<td>68</td>
+<td>h</td>
+</tr>
+<tr>
+<td>1101001</td>
+<td>105</td>
+<td>69</td>
+<td>i</td>
+</tr>
+<tr>
+<td>1101010</td>
+<td>106</td>
+<td>6A</td>
+<td>j</td>
+</tr>
+<tr>
+<td>1101011</td>
+<td>107</td>
+<td>6B</td>
+<td>k</td>
+</tr>
+<tr>
+<td>1101100</td>
+<td>108</td>
+<td>6C</td>
+<td>l</td>
+</tr>
+<tr>
+<td>1101101</td>
+<td>109</td>
+<td>6D</td>
+<td>m</td>
+</tr>
+<tr>
+<td>1101110</td>
+<td>110</td>
+<td>6E</td>
+<td>n</td>
+</tr>
+<tr>
+<td>1101111</td>
+<td>111</td>
+<td>6F</td>
+<td>o</td>
+</tr>
+<tr>
+<td>1110000</td>
+<td>112</td>
+<td>70</td>
+<td>p</td>
+</tr>
+<tr>
+<td>1110001</td>
+<td>113</td>
+<td>71</td>
+<td>q</td>
+</tr>
+<tr>
+<td>1110010</td>
+<td>114</td>
+<td>72</td>
+<td>r</td>
+</tr>
+<tr>
+<td>1110011</td>
+<td>115</td>
+<td>73</td>
+<td>s</td>
+</tr>
+<tr>
+<td>1110100</td>
+<td>116</td>
+<td>74</td>
+<td>t</td>
+</tr>
+<tr>
+<td>1110101</td>
+<td>117</td>
+<td>75</td>
+<td>u</td>
+</tr>
+<tr>
+<td>1110110</td>
+<td>118</td>
+<td>76</td>
+<td>v</td>
+</tr>
+<tr>
+<td>1110111</td>
+<td>119</td>
+<td>77</td>
+<td>w</td>
+</tr>
+<tr>
+<td>1111000</td>
+<td>120</td>
+<td>78</td>
+<td>x</td>
+</tr>
+<tr>
+<td>1111001</td>
+<td>121</td>
+<td>79</td>
+<td>y</td>
+</tr>
+<tr>
+<td>1111010</td>
+<td>122</td>
+<td>7A</td>
+<td>z</td>
+</tr>
+<tr>
+<td>1111011</td>
+<td>123</td>
+<td>7B</td>
+<td>{</td>
+</tr>
+<tr>
+<td>1111100</td>
+<td>124</td>
+<td>7C</td>
+<td>|</td>
+</tr>
+<tr>
+<td>1111101</td>
+<td>125</td>
+<td>7D</td>
+<td>}</td>
+</tr>
+<tr>
+<td>1111110</td>
+<td>126</td>
+<td>7E</td>
+<td>~</td>
+</tr>
+<tr>
+<td>1111111</td>
+<td>127</td>
+<td>7F</td>
+<td>DEL  (Delete)</td>
+</tr>
+</tbody></table>
+<h4 id="4-转义字符"><a href="#4-转义字符" class="headerlink" title="4.转义字符"></a>4.转义字符</h4><p><strong>1./n 换行</strong></p>
+<p><strong>2.// 输出一个/</strong></p>
+<p><strong>3./t 水平等距离输出数据</strong></p>
+<h4 id="6-字符串型"><a href="#6-字符串型" class="headerlink" title="6.字符串型"></a>6.字符串型</h4><p>作用：用于表示一串字符</p>
+<p>两种风格</p>
+<p>1.C风格 char 变量名[] = “字符串值”</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20220224213546763.png" alt="image-20220224213546763"></p>
+<p>输出</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20220224213614563.png" alt="image-20220224213614563"></p>
+<p>2.C++风格字符串 : string 变量名 = “字符串值”  （需添加头文件#include<string>）</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20220224214232301.png" alt="image-20220224214232301"></p>
+<p>结构与char风格输出结果一样</p>
+<h4 id="7-布尔类型"><a href="#7-布尔类型" class="headerlink" title="7.布尔类型"></a>7.布尔类型</h4><p>作用： 布尔数据类型代表真或假的值</p>
+<p>bool类型只有两个值：true 、false</p>
+<p>当赋值为true时，为1</p>
+<p>反之则为0</p>
+<h4 id="8-数据的输入"><a href="#8-数据的输入" class="headerlink" title="8.数据的输入"></a>8.数据的输入</h4><p>作用： 用于键盘获取数据</p>
+<p>关键字： cin &gt;&gt; 变量</p>
+<p>例如</p>
+<p>  int a = 0 ;</p>
+<p>  cout &lt;&lt; “请输入数据” &lt;&lt; endl ;</p>
+<p>  cin &gt;&gt; a;</p>
+<p>  cout &lt;&lt; “输出数据为: “ &lt;&lt; a &lt;&lt; endl;</p>
+<p>输出a=100</p>
+<h3 id="1-运算符"><a href="#1-运算符" class="headerlink" title="1.运算符"></a>1.运算符</h3><h4 id="1-算术运算符"><a href="#1-算术运算符" class="headerlink" title="1.算术运算符"></a>1.算术运算符</h4><p>作用： 用于处理四则运算</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20220227205652572.png" alt="image-20220227205652572"></p>
+<h4 id="2-赋值运算符"><a href="#2-赋值运算符" class="headerlink" title="2.赋值运算符"></a>2.赋值运算符</h4><p>+=  ； - = ； /= ； * =； % = ；</p>
+<h4 id="3-比较运算符"><a href="#3-比较运算符" class="headerlink" title="3.比较运算符"></a>3.比较运算符</h4><p>== ; ! = ;  &gt;; &lt; ; &gt; = ; &lt; =;</p>
+<h4 id="4-逻辑运算符"><a href="#4-逻辑运算符" class="headerlink" title="4.逻辑运算符"></a>4.逻辑运算符</h4><p>作用： 根据表达式返回真或者假</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20220227212109250.png" alt="image-20220227212109250"></p>
+<h4 id="5-程序流程结构"><a href="#5-程序流程结构" class="headerlink" title="5.程序流程结构"></a>5.程序流程结构</h4><p>三种程序运行结构： 顺序结构、 选择结构 、循环结构</p>
+<h5 id="1-顺序结构：-程序按顺序执行，不发生跳转"><a href="#1-顺序结构：-程序按顺序执行，不发生跳转" class="headerlink" title="1.顺序结构： 程序按顺序执行，不发生跳转"></a>1.顺序结构： 程序按顺序执行，不发生跳转</h5><h5 id="2-选择结构-依据条件是否满足，有选择的执行相应功能"><a href="#2-选择结构-依据条件是否满足，有选择的执行相应功能" class="headerlink" title="2. 选择结构: 依据条件是否满足，有选择的执行相应功能"></a>2. 选择结构: 依据条件是否满足，有选择的执行相应功能</h5><h6 id="2-1if-语句"><a href="#2-1if-语句" class="headerlink" title="2.1if 语句"></a>2.1if 语句</h6><p>单行 多行 多条件 嵌套</p>
+<p>  /*案例需求： </p>
+<p>  提示用户输入一个高考分数，根据分数提示如下判断</p>
+<p>  分数如果大于600分则视为考上一本，大于500则视为考上二本，大于400则视为考上三本，其余视为未考上本科；</p>
+<p>  在一本分数中，如果大于700分，考入北大，大于650则考入清华，大于600则考入人大</p>
+<p>  */</p>
+<p>  int score = 0;</p>
+<p>  cout &lt;&lt; “请输入你的高考分数” &lt;&lt; endl ;</p>
+<p>  cin &gt;&gt; score ;</p>
+<p>  cout &lt;&lt; “你输入的高考分数为”&lt;&lt; score &lt;&lt; endl ;</p>
+<p>  if (score &gt;= 600 &amp;&amp; score &lt;= 750)</p>
+<p>  {</p>
+<p>​    if (score &gt;= 700)</p>
+<p>​    {</p>
+<p>​      cout &lt;&lt; “恭喜你考上北大”  &lt;&lt; endl; </p>
+<p>​    }</p>
+<p>​    else if (score &gt;= 650 &amp;&amp; score &lt;= 700)</p>
+<p>​    {</p>
+<p>​      cout &lt;&lt; “恭喜你考上清华大学” &lt;&lt; endl;   </p>
+<p>​    }</p>
+<p>​    else{</p>
+<p>​      cout &lt;&lt; “恭喜考上人大” &lt;&lt; endl ;</p>
+<p>​    }</p>
+<p>  }</p>
+<p>  else if (score &gt;= 500 &amp;&amp; score &lt;= 600)</p>
+<p>  {</p>
+<p>​    cout &lt;&lt; “恭喜你考上二本大学” &lt;&lt; endl;</p>
+<p>  }</p>
+<p>  else if (score &gt;= 400 &amp;&amp; score &lt;=500)</p>
+<p>  {</p>
+<p>​    cout &lt;&lt; “恭喜你考上三本大学” &lt;&lt; endl ;</p>
+<p>  }</p>
+<p>  else if (score &gt;= 750 )</p>
+<p>  {</p>
+<p>​    cout &lt;&lt; “你输入的分数有误” &lt;&lt; endl ;</p>
+<p>  }</p>
+<p>  else{</p>
+<p>​    cout &lt;&lt; “很遗憾你没有考上大学” &lt;&lt; endl ; </p>
+<p>  }</p>
+<p>  system (“pause”);</p>
+<p>  return 0 ;</p>
+<p>}</p>
+<p>  // 三只小猪称重</p>
+<p>  //有三只小猪ABC，请分别输入三只小猪的体重，并判断哪只小猪最重</p>
+<p>  float Pig_One = 0 ;</p>
+<p>  float Pig_Two = 0 ;</p>
+<p>  float Pig_Three = 0;</p>
+<p>  cout &lt;&lt; “请输入第一只小猪的体重” &lt;&lt; endl ;</p>
+<p>  cin &gt;&gt; Pig_One;</p>
+<p>  cout &lt;&lt; “输入第一只小猪的体重为”&lt;&lt;Pig_One&lt;&lt; endl;</p>
+<p>  cout &lt;&lt; “请输入第二只小猪的体重” &lt;&lt; endl ;</p>
+<p>  cin &gt;&gt; Pig_Two;</p>
+<p>  cout &lt;&lt; “输入第二只小猪的体重为”&lt;&lt;Pig_Two&lt;&lt; endl;</p>
+<p>  cout &lt;&lt; “请输入第三只小猪的体重” &lt;&lt; endl ;</p>
+<p>  cin &gt;&gt; Pig_Three;</p>
+<p>  cout &lt;&lt; “输入第三只小猪的体重为”&lt;&lt;Pig_Three&lt;&lt; endl;</p>
+<p>  if (Pig_One &gt; Pig_Two)</p>
+<p>  {</p>
+<p>​    if (Pig_One &gt; Pig_Three)</p>
+<p>​    {</p>
+<p>​      cout &lt;&lt; “第一只小猪最重” &lt;&lt; endl ;</p>
+<p>​    }</p>
+<p>​    else {</p>
+<p>​      cout &lt;&lt; “第三只小猪最重” &lt;&lt; endl ;</p>
+<p>​    }</p>
+<p>  }</p>
+<p>  else</p>
+<p>  {</p>
+<p>​    if (Pig_Two &gt; Pig_Three )</p>
+<p>​    {</p>
+<p>​      cout &lt;&lt; “第二只小猪最重” &lt;&lt; endl ;</p>
+<p>​    }</p>
+<p>​    else</p>
+<p>​    {</p>
+<p>​      cout &lt;&lt; “第三只小猪最重” &lt;&lt; endl ;</p>
+<p>​    }</p>
+<p>  }</p>
+<p>  system (“pause”) ;</p>
+<p>}</p>
+<h6 id="2-2三目运算符"><a href="#2-2三目运算符" class="headerlink" title="2.2三目运算符"></a>2.2三目运算符</h6><p>语句；表达式1 ？ 表达式2 ： 表达式3</p>
+<p> <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20220227230457721.png" alt="image-20220227230457721"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20220227230528736.png" alt="image-20220227230528736"></p>
+<p>2.3switch</p>
+<p>  //使用switch给电影打分</p>
+<p>  //9~10为经典</p>
+<p>  //8~7非常好</p>
+<p>  //6~5一般</p>
+<p>  //5分以下 烂片</p>
+<p>  int Movie_Score= 0 ;</p>
+<p>  cout &lt;&lt; “请给电影打0~10分” &lt;&lt; endl ;</p>
+<p>  cin &gt;&gt; Movie_Score;</p>
+<p>  cout &lt;&lt; “你给电影打的分为” &lt;&lt; Movie_Score &lt;&lt; endl ;</p>
+<p>  switch(Movie_Score)</p>
+<p>  {</p>
+<p>​    case 10:</p>
+<p>​    case 9 :</p>
+<p>​    cout &lt;&lt; “您认为该电影是经典电影” &lt;&lt; endl ;</p>
+<p>​    break;</p>
+<p>​    case 8:</p>
+<p>​    case 7:</p>
+<p>​    cout &lt;&lt; “您认为该电影非常好” &lt;&lt; endl ;</p>
+<p>​    break;</p>
+<p>​    case 6: </p>
+<p>​    case 5:</p>
+<p>​    cout &lt;&lt; “您认为该电影一般” &lt;&lt; endl ;</p>
+<p>​    break;</p>
+<p>​    case 4:</p>
+<p>​    case 3:</p>
+<p>​    case 2:</p>
+<p>​    case 1:</p>
+<p>​    case 0:</p>
+<p>​    cout &lt;&lt; “您认为该电影是烂片” &lt;&lt; endl ;</p>
+<p>​    break;</p>
+<p>​    default:</p>
+<p>​    cout &lt;&lt;”您的评分超出给定范围” &lt;&lt; endl;</p>
+<p>  }</p>
+<p>  system (“pause”);</p>
+<p>  return 0 ;</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20220227233056599.png" alt="image-20220227233056599"></p>
+<h5 id="3-循环结构：-依据条件是否满足，循环多次执行某段代码"><a href="#3-循环结构：-依据条件是否满足，循环多次执行某段代码" class="headerlink" title="3.循环结构： 依据条件是否满足，循环多次执行某段代码"></a>3.循环结构： 依据条件是否满足，循环多次执行某段代码</h5><h6 id="3-1while循环语句"><a href="#3-1while循环语句" class="headerlink" title="3.1while循环语句"></a>3.1while循环语句</h6><p>作用：满足循环解雇，执行循环结构</p>
+<p>语法：while（循环条件）{循环的语句}</p>
+<h6 id="3-2do…while"><a href="#3-2do…while" class="headerlink" title="3.2do…while"></a>3.2do…while</h6><p>作用：满足循环条件，执行循环结构</p>
+<p>语法：do（循环语句）while（循环条件）</p>
+<p>注意：与while的区别在于do…while会先执行一次循环再判断循环条件</p>
+<p>  //案例：水仙花数是指一个三位数，他的每个位上的数字三次幂之和等于他本身</p>
+<p>  //例如：1^3+5^3+3^3=153</p>
+<p>  //请利用do while循环语句，求出所有三位数的水仙花数</p>
+<p>  int num = 100;</p>
+<p>  do{</p>
+<p>​    </p>
+<p>​    int a =0;//</p>
+<p>​    int b =0;//</p>
+<p>​    int c =0;//</p>
+<p>​    a=num%10;</p>
+<p>​    b=num/10%10;</p>
+<p>​    c=num/100;</p>
+<p>​    if(a<em>a</em>a + b<em>b</em>b + c<em>c</em>c == num)</p>
+<p>​    {</p>
+<p>​      cout &lt;&lt; “该数为水仙花数” &lt;&lt; num &lt;&lt;  endl;</p>
+<p>​    }</p>
+<p>​    num++;</p>
+<p>  }while(num&lt;1000);</p>
+<p>  system(“pause”);</p>
+<p>  return 0;</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20220228165343361.png" alt="image-20220228165343361"></p>
+<h6 id="3-3for-循环语句"><a href="#3-3for-循环语句" class="headerlink" title="3.3for 循环语句"></a>3.3for 循环语句</h6><p>作用：满足循环条件，执行循环语句</p>
+<p>语法：for（起始表达式；条件表达式；末尾循环体）{循环语句}；</p>
+<p>  //练习案例 ：敲桌子</p>
+<p>  //案例描述：从1开始数到数字100，如果数字个位有7，或者 数字十位有7，或者该数字是7的倍数</p>
+<p>  //我们打印敲桌子，其余数字直接打印输出</p>
+<p>  int num;</p>
+<p>  for (num=1; num &lt;=100; num++)</p>
+<p>  {</p>
+<p>​    /* code */</p>
+<p>​    int a =0;</p>
+<p>​    int b =0;</p>
+<p>​    int c=0;</p>
+<p>​    a = num%10;</p>
+<p>​    b= num/10;</p>
+<p>​    c= num%7; // 若c=0，则为7的倍数</p>
+<p>​    if(a==7 || b == 7 || c == 0)</p>
+<p>​    {</p>
+<p>​      cout&lt;&lt; “该数字为：”&lt;&lt; num &lt;&lt; endl;</p>
+<p>​      cout&lt;&lt; “敲桌子”&lt;&lt; endl;</p>
+<p>​    }</p>
+<p>​    else{</p>
+<p>​      cout&lt;&lt; “该数字既不是的倍数，且十位个位不包含七:” &lt;&lt;  num  &lt;&lt;  endl ;</p>
+<p>​    }</p>
+<p>  }</p>
+<p>  system(“pause”);</p>
+<p>  return 0;</p>
+<h6 id="3-4嵌套循环"><a href="#3-4嵌套循环" class="headerlink" title="3.4嵌套循环"></a>3.4嵌套循环</h6><p>  //嵌套循环，生成10*10的星阵</p>
+<p>#if 1</p>
+<p>  char str= ‘*’;</p>
+<p>  int y;</p>
+<p>  int x;</p>
+<p>  for (y=0;y&lt;10;y++)</p>
+<p>  {</p>
+<p>​    for (x = 0; x &lt; 10; x++)</p>
+<p>​    {</p>
+<p>​      cout &lt;&lt; str ; </p>
+<p>​    }</p>
+<p>​    cout &lt;&lt; endl;</p>
+<p>  }</p>
+<p>#endif</p>
+<p>  system(“pause”);</p>
+<p>  return 0;</p>
+<p>嵌套循环，生成九九乘法表</p>
+<p>  int x = 0;</p>
+<p>  int y = 0;</p>
+<p>  for (x = 1; x &lt;=9; x++)</p>
+<p>  {</p>
+<p>​    for (y = 1; y&lt;= x; y++)</p>
+<p>​    {</p>
+<p>​      cout &lt;&lt; x &lt;&lt; “X” &lt;&lt;y &lt;&lt; “=”&lt;&lt; x*y &lt;&lt; “ “ ;</p>
+<p>​      </p>
+<p>​    }</p>
+<p>​    cout &lt;&lt; endl;</p>
+<p>  }</p>
+<h5 id="4-跳转语句"><a href="#4-跳转语句" class="headerlink" title="4.跳转语句"></a>4.跳转语句</h5><h6 id="4-1break语句"><a href="#4-1break语句" class="headerlink" title="4.1break语句"></a>4.1break语句</h6><p>作用：用于跳出循环结构或者选择结构</p>
+<p>使用时机：</p>
+<p>1.出现在switch条件语句中，终止case跳出switch</p>
+<p>2.出现在循环语句中，作用：跳出当前循环</p>
+<p>3.出现在嵌套循环中，跳出最近的内层循环语句</p>
+<h6 id="4-2continue语句"><a href="#4-2continue语句" class="headerlink" title="4.2continue语句"></a>4.2continue语句</h6><p>作用：在循环语句中，跳过本次循环中余下尚未执行的语句，继续执行下一次循环</p>
+<h6 id="4-3goto语句"><a href="#4-3goto语句" class="headerlink" title="4.3goto语句"></a>4.3goto语句</h6><p>作用：可以无条件跳转语句</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Way Jay</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://starkang1.top/archives/43028/">https://starkang1.top/archives/43028/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://starkang1.top" target="_blank">Way-Jay's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/C-C/">C/C++</a></div><div class="post_share"><div class="social-share" data-image="https://w.wallhaven.cc/full/6o/wallhaven-6o7md7.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/archives/11992/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://w.wallhaven.cc/full/6o/wallhaven-6o7md7.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">厦门之旅</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#C-%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">C++课程学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%EF%BC%9AC-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E5%85%A5%E9%97%A8"><span class="toc-number">1.1.</span> <span class="toc-text">第一阶段：C++基础语法入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8F%98%E9%87%8F"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%B8%B8%E9%87%8F"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">1.1.3.</span> <span class="toc-text">3.关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%A0%87%E8%AF%86%E7%AC%A6%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="toc-number">1.1.4.</span> <span class="toc-text">4.标识符命名规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.5.</span> <span class="toc-text">5.数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%95%B4%E5%9E%8B"><span class="toc-number">1.1.5.1.</span> <span class="toc-text">1.整型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%AE%9E%E5%9E%8B"><span class="toc-number">1.1.5.2.</span> <span class="toc-text">2.实型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%AD%97%E7%AC%A6%E5%9E%8B"><span class="toc-number">1.1.5.3.</span> <span class="toc-text">3.字符型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="toc-number">1.1.5.4.</span> <span class="toc-text">4.转义字符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9E%8B"><span class="toc-number">1.1.5.5.</span> <span class="toc-text">6.字符串型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.5.6.</span> <span class="toc-text">7.布尔类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%BE%93%E5%85%A5"><span class="toc-number">1.1.5.7.</span> <span class="toc-text">8.数据的输入</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.1.6.</span> <span class="toc-text">1.运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.1.6.1.</span> <span class="toc-text">1.算术运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.1.6.2.</span> <span class="toc-text">2.赋值运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.1.6.3.</span> <span class="toc-text">3.比较运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.1.6.4.</span> <span class="toc-text">4.逻辑运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E7%A8%8B%E5%BA%8F%E6%B5%81%E7%A8%8B%E7%BB%93%E6%9E%84"><span class="toc-number">1.1.6.5.</span> <span class="toc-text">5.程序流程结构</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84%EF%BC%9A-%E7%A8%8B%E5%BA%8F%E6%8C%89%E9%A1%BA%E5%BA%8F%E6%89%A7%E8%A1%8C%EF%BC%8C%E4%B8%8D%E5%8F%91%E7%94%9F%E8%B7%B3%E8%BD%AC"><span class="toc-number">1.1.6.5.1.</span> <span class="toc-text">1.顺序结构： 程序按顺序执行，不发生跳转</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84-%E4%BE%9D%E6%8D%AE%E6%9D%A1%E4%BB%B6%E6%98%AF%E5%90%A6%E6%BB%A1%E8%B6%B3%EF%BC%8C%E6%9C%89%E9%80%89%E6%8B%A9%E7%9A%84%E6%89%A7%E8%A1%8C%E7%9B%B8%E5%BA%94%E5%8A%9F%E8%83%BD"><span class="toc-number">1.1.6.5.2.</span> <span class="toc-text">2. 选择结构: 依据条件是否满足，有选择的执行相应功能</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#2-1if-%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.1.6.5.2.1.</span> <span class="toc-text">2.1if 语句</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-2%E4%B8%89%E7%9B%AE%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.1.6.5.2.2.</span> <span class="toc-text">2.2三目运算符</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84%EF%BC%9A-%E4%BE%9D%E6%8D%AE%E6%9D%A1%E4%BB%B6%E6%98%AF%E5%90%A6%E6%BB%A1%E8%B6%B3%EF%BC%8C%E5%BE%AA%E7%8E%AF%E5%A4%9A%E6%AC%A1%E6%89%A7%E8%A1%8C%E6%9F%90%E6%AE%B5%E4%BB%A3%E7%A0%81"><span class="toc-number">1.1.6.5.3.</span> <span class="toc-text">3.循环结构： 依据条件是否满足，循环多次执行某段代码</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#3-1while%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.1.6.5.3.1.</span> <span class="toc-text">3.1while循环语句</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3-2do%E2%80%A6while"><span class="toc-number">1.1.6.5.3.2.</span> <span class="toc-text">3.2do…while</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3-3for-%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.1.6.5.3.3.</span> <span class="toc-text">3.3for 循环语句</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3-4%E5%B5%8C%E5%A5%97%E5%BE%AA%E7%8E%AF"><span class="toc-number">1.1.6.5.3.4.</span> <span class="toc-text">3.4嵌套循环</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E8%B7%B3%E8%BD%AC%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.1.6.5.4.</span> <span class="toc-text">4.跳转语句</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#4-1break%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.1.6.5.4.1.</span> <span class="toc-text">4.1break语句</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4-2continue%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.1.6.5.4.2.</span> <span class="toc-text">4.2continue语句</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4-3goto%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.1.6.5.4.3.</span> <span class="toc-text">4.3goto语句</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2022 By Way Jay</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>(() => {
+  const $mermaidWrap = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaidWrap.length) {
+    window.runMermaid = () => {
+      window.loadMermaid = true
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? '' : ''
+
+      Array.from($mermaidWrap).forEach((item, index) => {
+        const mermaidSrc = item.firstElementChild
+        const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+        const mermaidID = 'mermaid-' + index
+        const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+        mermaid.mermaidAPI.render(mermaidID, mermaidDefinition, (svgCode) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svgCode)
+        })
+      })
+    }
+
+    const loadMermaid = () => {
+      window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+    }
+
+    window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+  }
+})()</script><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'O6X1m7CBkUU3wC1JwKLdUUyp-gzGzoHsz',
+      appKey: '3iiu50GE1rEanO2MXRcWIQa0',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: true
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script><script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script><script defer src="https://rmt.dogedoge.com/fetch/~/source/jsdelivr/npm/jquery@latest/dist/jquery.min.js"></script><script defer data-pjax src="https://cdn.jsdelivr.net/gh/sirxemic/jquery.ripples/dist/jquery.ripples.js"></script><script defer data-pjax src="/js/ripples.js"></script><script src="zen3d.min.js"></script><script src="https://cdn.jsdelivr.net/gh/xiabo2/CDN@latest/fishes.js"></script><script src="/js/timing.js"</script><script src="https://cdn.jsdelivr.net/gh/username/live2d-widget@latest/autoload.js"></script><div class="aplayer no-destroy" data-id="7237258595" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="true" data-order="random" data-preload="auto" data-autoplay="auto" muted></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/SerokSSR/cdn/meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="music"]):not([href="/no-pjax/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax], .pjax-reload script').forEach(*item* *=>* {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div class="pjax-reload"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__fadeInLeft');
+    arr[i].setAttribute('data-wow-duration', '600ms');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '100');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__fadeInRightBig');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script></div><script defer="defer" src="https://cdn.jsdelivr.net/gh/graingert/wow@1.3.0/dist/wow.min.js"></script><script defer="defer" src="/js/wow_init.js"></script></div><!-- hexo injector body_end start -->
+  <script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js"></script>
+  <script data-pjax>
+        function GithubCalendarConfig(){
+            var git_githubapiurl ="https://python-github-calendar-api.vercel.app/api?starkang1";
+            var git_color =['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f'];
+            var git_user ="starkang1";
+            var parent_div_git = document.getElementById('recent-posts');
+            var git_div_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>';
+            if(parent_div_git && location.pathname =='/'){
+                console.log('已挂载github calendar')
+                // parent_div_git.innerHTML=git_div_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",git_div_html) // 有报错，但不影响使用(支持pjax跳转)
+            };
+            GithubCalendar(git_githubapiurl,git_color,git_user)
+        }
+        if(document.getElementById('recent-posts')){
+            GithubCalendarConfig()
+        }
+    </script>
+    <style>#github_container{min-height:280px}@media screen and (max-width:650px) {#github_container{background-image:;min-height:0px}}</style>
+    <style></style><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            history_calendar_injector_config()
+        } </script><script data-pjax  src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/20180919030733970.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":250},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
