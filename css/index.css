@@ -3408,7 +3408,7 @@ li.categoryBar-list-item:nth-child(5)>span::after {
   content: '笔记' !important;
 }
 li.categoryBar-list-item:nth-child(6)>span::after {
-  content: '练习' !important;
+  content: '报错解决' !important;
 }
 li.categoryBar-list-item {
   width: 32.3% !important;
