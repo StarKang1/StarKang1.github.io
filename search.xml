@@ -8,9 +8,21 @@
       <link href="/archives/19721/"/>
       <url>/archives/19721/</url>
       
-        <content type="html"><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/%601JU_%7DO2G0C%$9G">PPVSI4O.png)<br>解决方法：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo --no-optional</span><br><span class="line">if it doesn&#x27;t work </span><br><span class="line"> try</span><br><span class="line">$ npm uninstall hexo-cli -g</span><br><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure><p>或者</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ cnpm install hexo --no-optional</span><br><span class="line">if it doesn&#x27;t work</span><br><span class="line">try</span><br><span class="line">$ cnpm uninstall hexo-cli -g</span><br><span class="line">$ cnpm uninstall hexo-cli -g</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/%601JU_%7DO2G0C%$9G"><br>解决方法：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo --no-optional</span><br><span class="line">if it doesn&#x27;t work </span><br><span class="line"> try</span><br><span class="line">$ npm uninstall hexo-cli -g</span><br><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure><p>或者</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ cnpm install hexo --no-optional</span><br><span class="line">if it doesn&#x27;t work</span><br><span class="line">try</span><br><span class="line">$ cnpm uninstall hexo-cli -g</span><br><span class="line">$ cnpm uninstall hexo-cli -g</span><br></pre></td></tr></table></figure>]]></content>
       
       
+      <categories>
+          
+          <category> 问题 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> BUG </tag>
+            
+        </tags>
       
     </entry>
     
@@ -96,7 +108,7 @@
       <link href="/archives/11992/"/>
       <url>/archives/11992/</url>
       
-        <content type="html"><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/ad544955d098f90545fefd363990c08.jpg"></p><p><img src="https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/47253b0d3f582302f05c03d4bd6be3d.jpg"></p><p><img src="https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/5051a9f10c5430cf8050e0f32aee331.jpg"></p><p><img src="https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/432ca9075247e0d5d342c7ee0fb9a25.jpg"></p><p><img src="https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/109b9adb55d5ec596f4d8f9af0d2154.jpg"></p><p><img src="https://gitee.com/xu-weijian/pic-go/raw/master/img/2371065398db1e5d3d43066d86b217b.jpg"></p><p><img src="https://gitee.com/xu-weijian/pic-go/raw/master/img/f9c5b029ab7852c22c048cbf1694b16.jpg"></p>]]></content>
+        <content type="html"><![CDATA[<div class="fj-gallery"><p><img src="https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/ad544955d098f90545fefd363990c08.jpg"></p><p><img src="https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/47253b0d3f582302f05c03d4bd6be3d.jpg"></p><p><img src="https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/5051a9f10c5430cf8050e0f32aee331.jpg"></p><p><img src="https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/432ca9075247e0d5d342c7ee0fb9a25.jpg"></p><p><img src="https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/109b9adb55d5ec596f4d8f9af0d2154.jpg"></p><p><img src="https://gitee.com/xu-weijian/pic-go/raw/master/img/2371065398db1e5d3d43066d86b217b.jpg"></p><p><img src="https://gitee.com/xu-weijian/pic-go/raw/master/img/f9c5b029ab7852c22c048cbf1694b16.jpg"></p>          </div>]]></content>
       
       
       <categories>
@@ -173,7 +185,7 @@
       <link href="/archives/51637/"/>
       <url>/archives/51637/</url>
       
-        <content type="html"><![CDATA[<p>git init 在想要创建repositoory的地方点击Git Bash<br>git status 查看变化/状态<br>git add -A 添加<file><br>再次查看状态，提示changes to committed<br>git commit -m”添加你的备注，或者你修改了什么”<br>运行git log可以查看提交记录<br>git diff 查看文件做了哪些变化<br>git checkout – .撤销修改<br>git reset –hard 版本号前7位 执行版本回退<br>git reflog 查看HEAD版本变化<br>再次git reset –hard 最新版本号<br>回到最新的版本<br>git clean -xf 删除没有add的文件</p><p>如果你的文件名是中文的可能会乱码，执行以下代码<br>git config –global i18n.commitencoding utf-8<br>git config –global i18n.logoutputencoding utf-8</p><p>本地git和github的链接<br>1.github注册账号<br>2.配置你的用户和邮箱：git config –global user.name “用户名”<br>           git config –global user.email“邮箱”<br>3.生成ssh key<br>  运行ssh-keygen -t rsa -C”email”<br>  将生成的ssh key复制，执行clip &lt; ~/.ssh/id_rsa.pub<br>4.ssh -T <a href="mailto:&#x67;&#105;&#x74;&#64;&#103;&#105;&#x74;&#104;&#117;&#98;&#x2e;&#99;&#x6f;&#109;">&#x67;&#105;&#x74;&#64;&#103;&#105;&#x74;&#104;&#117;&#98;&#x2e;&#99;&#x6f;&#109;</a><br>查看是否链接成功<br>5.首次提交 git remote add origin git@你的github库地址<br>6.git push -u origin master 提交<br>去github上就可以看到更新</p>]]></content>
+        <content type="html"><![CDATA[<p>git init 在想要创建repositoory的地方点击Git Bash<br>git status 查看变化/状态<br>git add -A 添加<file><br>再次查看状态，提示changes to committed<br>git commit -m”添加你的备注，或者你修改了什么”<br>运行git log可以查看提交记录<br>git diff 查看文件做了哪些变化<br>git checkout – .撤销修改<br>git reset –hard 版本号前7位 执行版本回退<br>git reflog 查看HEAD版本变化<br>再次git reset –hard 最新版本号<br>回到最新的版本<br>git clean -xf 删除没有add的文件</p><p>如果你的文件名是中文的可能会乱码，执行以下代码<br>git config –global i18n.commitencoding utf-8<br>git config –global i18n.logoutputencoding utf-8</p><p>本地git和github的链接<br>1.github注册账号<br>2.配置你的用户和邮箱：git config –global user.name “用户名”<br>           git config –global user.email“邮箱”<br>3.生成ssh key<br>  运行ssh-keygen -t rsa -C”email”<br>  将生成的ssh key复制，执行clip &lt; ~/.ssh/id_rsa.pub<br>4.ssh -T <a href="mailto:&#103;&#x69;&#x74;&#x40;&#103;&#x69;&#x74;&#104;&#x75;&#98;&#46;&#99;&#111;&#x6d;">&#103;&#x69;&#x74;&#x40;&#103;&#x69;&#x74;&#104;&#x75;&#98;&#46;&#99;&#111;&#x6d;</a><br>查看是否链接成功<br>5.首次提交 git remote add origin git@你的github库地址<br>6.git push -u origin master 提交<br>去github上就可以看到更新</p>]]></content>
       
       
       <categories>
@@ -215,33 +227,6 @@
     
     
     <entry>
-      <title>Butterfly主题魔改记录</title>
-      <link href="/archives/816/"/>
-      <url>/archives/816/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> 练习 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-            <tag> Butterfly </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Butterfly主题安装笔记</title>
       <link href="/archives/20067/"/>
       <url>/archives/20067/</url>
@@ -258,9 +243,9 @@
       
         <tags>
             
-            <tag> Butterfly </tag>
-            
             <tag> HEXO </tag>
+            
+            <tag> Butterfly </tag>
             
         </tags>
       

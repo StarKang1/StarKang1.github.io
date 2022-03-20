@@ -3375,22 +3375,22 @@ span.categoryBar-list-count::after {
   right: -100%;
 }
 li.categoryBar-list-item:nth-child(1) {
-  background: url('https://w.wallhaven.cc/full/z8/wallhaven-z8odwg.jpg');
+  background: url('https://picsum.photos/id/435/300/300');
 }
 li.categoryBar-list-item:nth-child(2) {
-  background: url('https://w.wallhaven.cc/full/28/wallhaven-281d5y.png');
+  background: url('https://picsum.photos/id/439/300/300');
 }
 li.categoryBar-list-item:nth-child(3) {
-  background: url('https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/游戏机.png');
+  background: url('https://picsum.photos/id/781/300/300');
 }
 li.categoryBar-list-item:nth-child(4) {
-  background: url('https://w.wallhaven.cc/full/5w/wallhaven-5wr3m7.jpg');
+  background: url('https://picsum.photos/id/495/300/300');
 }
 li.categoryBar-list-item:nth-child(5) {
-  background: url('https://w.wallhaven.cc/full/j5/wallhaven-j5ly95.jpg');
+  background: url('https://picsum.photos/id/668/300/300');
 }
 li.categoryBar-list-item:nth-child(6) {
-  background: url('https://r1.ilikewallpaper.net/iphone-11-pro-wallpapers/download/4883/Trees-Autumn-iphone-wallpaper-ilikewallpaper_com.jpg');
+  background: url('https://picsum.photos/id/397/300/300');
 }
 li.categoryBar-list-item:nth-child(1)>span::after {
   content: '作品' !important;
@@ -3408,7 +3408,7 @@ li.categoryBar-list-item:nth-child(5)>span::after {
   content: '笔记' !important;
 }
 li.categoryBar-list-item:nth-child(6)>span::after {
-  content: '报错解决' !important;
+  content: '问题' !important;
 }
 li.categoryBar-list-item {
   width: 32.3% !important;
