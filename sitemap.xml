@@ -119,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://starkang1.top/tags/</loc>
+    <loc>https://starkang1.top/music/</loc>
     
     <lastmod>2022-03-18</lastmod>
     
@@ -128,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://starkang1.top/music/</loc>
+    <loc>https://starkang1.top/tags/</loc>
     
     <lastmod>2022-03-18</lastmod>
     
@@ -230,20 +230,6 @@
   </url>
   
   <url>
-    <loc>https://starkang1.top/tags/C/</loc>
-    <lastmod>2022-03-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://starkang1.top/tags/%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84/</loc>
-    <lastmod>2022-03-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://starkang1.top/tags/HEXO/</loc>
     <lastmod>2022-03-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -252,6 +238,20 @@
   
   <url>
     <loc>https://starkang1.top/tags/Butterfly/</loc>
+    <lastmod>2022-03-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://starkang1.top/tags/C/</loc>
+    <lastmod>2022-03-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://starkang1.top/tags/%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84/</loc>
     <lastmod>2022-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -323,14 +323,14 @@
   </url>
   
   <url>
-    <loc>https://starkang1.top/categories/%E7%94%9F%E6%B4%BB/</loc>
+    <loc>https://starkang1.top/categories/%E6%B8%B8%E6%88%8F/</loc>
     <lastmod>2022-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://starkang1.top/categories/%E6%B8%B8%E6%88%8F/</loc>
+    <loc>https://starkang1.top/categories/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2022-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
