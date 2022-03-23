@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>C++基础(四)</title>
+      <link href="/posts/34325/"/>
+      <url>/posts/34325/</url>
+      
+        <content type="html"><![CDATA[<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p><strong>作用</strong><br>将一段经常使用的代码封装起来，减少重复代码<br>例如将一个较大的程序分成若干个小程序块，每个模块实现特定的功能</p><h4 id="函数的定义"><a href="#函数的定义" class="headerlink" title="函数的定义"></a>函数的定义</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.返回值类型</span><br><span class="line">2.函数名</span><br><span class="line">3.参数列表</span><br><span class="line">4.函数体语句</span><br><span class="line">5.return表达式</span><br></pre></td></tr></table></figure><p><strong>语法</strong><br>例如</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int add(int num1,int num2)</span><br><span class="line">&#123;</span><br><span class="line">    int sum =num1+num2;</span><br><span class="line">    return sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>在函数参数列表中的参数没有实际的值，称为形式参数，简称形参<br>在调用函数中，实际参数的值会传递给形式参数</p><h4 id="函数的常见样式"><a href="#函数的常见样式" class="headerlink" title="函数的常见样式"></a>函数的常见样式</h4><p><strong>无参无返</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">void example1()</span><br><span class="line">&#123;</span><br><span class="line">    cout &lt;&lt; &quot;This is a example of 无参无返&quot; &lt;&lt; endl; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>有参无返</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">void example2(int a)</span><br><span class="line">&#123;</span><br><span class="line">    cout &lt;&lt; &quot;This is a example of 有参无返&quot; &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>无参有返</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int example3()</span><br><span class="line">&#123;</span><br><span class="line">    cout &lt;&lt; &quot;This is a example of 无参有返&quot; &lt;&lt; endl; </span><br><span class="line">    return 1000;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>有参有返</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">int example4(int num1,int num2)</span><br><span class="line">&#123;</span><br><span class="line">    int sum =num1+num2;</span><br><span class="line">    cout &lt;&lt; &quot;This is a example of 有参有返&quot; &lt;&lt; endl; </span><br><span class="line">    return sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>对于void来说，它是一个无类型变量<br>所以不需要返回值</p><h3 id="函数的分文件编写"><a href="#函数的分文件编写" class="headerlink" title="函数的分文件编写"></a>函数的分文件编写</h3><p>作用：让代码结构更加清新<br><strong>步骤</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">创建后缀名为.h的头文件</span><br><span class="line">创建后缀名为.cpp的源文件</span><br><span class="line">在头文件中写函数的声明</span><br><span class="line">在源文件中写函数的定义</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> 笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> 函数 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C++基础(三)</title>
       <link href="/posts/4328/"/>
       <url>/posts/4328/</url>
@@ -241,7 +270,7 @@
       <link href="/posts/51637/"/>
       <url>/posts/51637/</url>
       
-        <content type="html"><![CDATA[<p>git init 在想要创建repositoory的地方点击Git Bash<br>git status 查看变化/状态<br>git add -A 添加<file><br>再次查看状态，提示changes to committed<br>git commit -m”添加你的备注，或者你修改了什么”<br>运行git log可以查看提交记录<br>git diff 查看文件做了哪些变化<br>git checkout – .撤销修改<br>git reset –hard 版本号前7位 执行版本回退<br>git reflog 查看HEAD版本变化<br>再次git reset –hard 最新版本号<br>回到最新的版本<br>git clean -xf 删除没有add的文件</p><p>如果你的文件名是中文的可能会乱码，执行以下代码<br>git config –global i18n.commitencoding utf-8<br>git config –global i18n.logoutputencoding utf-8</p><p>本地git和github的链接<br>1.github注册账号<br>2.配置你的用户和邮箱：git config –global user.name “用户名”<br>           git config –global user.email“邮箱”<br>3.生成ssh key<br>  运行ssh-keygen -t rsa -C”email”<br>  将生成的ssh key复制，执行clip &lt; ~/.ssh/id_rsa.pub<br>4.ssh -T <a href="mailto:&#x67;&#105;&#116;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#46;&#99;&#111;&#x6d;">&#x67;&#105;&#116;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#46;&#99;&#111;&#x6d;</a><br>查看是否链接成功<br>5.首次提交 git remote add origin git@你的github库地址<br>6.git push -u origin master 提交<br>去github上就可以看到更新</p>]]></content>
+        <content type="html"><![CDATA[<p>git init 在想要创建repositoory的地方点击Git Bash<br>git status 查看变化/状态<br>git add -A 添加<file><br>再次查看状态，提示changes to committed<br>git commit -m”添加你的备注，或者你修改了什么”<br>运行git log可以查看提交记录<br>git diff 查看文件做了哪些变化<br>git checkout – .撤销修改<br>git reset –hard 版本号前7位 执行版本回退<br>git reflog 查看HEAD版本变化<br>再次git reset –hard 最新版本号<br>回到最新的版本<br>git clean -xf 删除没有add的文件</p><p>如果你的文件名是中文的可能会乱码，执行以下代码<br>git config –global i18n.commitencoding utf-8<br>git config –global i18n.logoutputencoding utf-8</p><p>本地git和github的链接<br>1.github注册账号<br>2.配置你的用户和邮箱：git config –global user.name “用户名”<br>           git config –global user.email“邮箱”<br>3.生成ssh key<br>  运行ssh-keygen -t rsa -C”email”<br>  将生成的ssh key复制，执行clip &lt; ~/.ssh/id_rsa.pub<br>4.ssh -T <a href="mailto:&#103;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#109;">&#103;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#109;</a><br>查看是否链接成功<br>5.首次提交 git remote add origin git@你的github库地址<br>6.git push -u origin master 提交<br>去github上就可以看到更新</p>]]></content>
       
       
       <categories>
