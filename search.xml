@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>C++基础(三)</title>
+      <link href="/posts/4328/"/>
+      <url>/posts/4328/</url>
+      
+        <content type="html"><![CDATA[<h3 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h3><p>就是再一维数组的基础上增加一个维度</p><h4 id="定义方式"><a href="#定义方式" class="headerlink" title="定义方式"></a>定义方式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.数据类型 数组名[行数] [列数]</span><br><span class="line">2.数据类型 数组名[行数] [列数] = &#123;&#123;数据1，数据2&#125;，&#123;数据3，数据4&#125;&#125;</span><br><span class="line">3.数据类型 数组名[行数] 列数]=&#123;数据1，数据2，数据3，数据4&#125;</span><br><span class="line">4.数据类型 数组名[] [列数]= &#123;数据1，数据2，数据3，数据4&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h4 id="二维数组作用"><a href="#二维数组作用" class="headerlink" title="二维数组作用"></a>二维数组作用</h4><p>1.查看占用内存空间<br>2.查看二维数组的首地址</p><p>二维数组应用案例</p><p>考试成绩统计：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">int score[3][3] = &#123;</span><br><span class="line">    &#123;100,100,100&#125;,</span><br><span class="line">    &#123;90,50,100&#125;,</span><br><span class="line">    &#123;60,70,80&#125;</span><br><span class="line">&#125;;</span><br><span class="line">string name[3] = &#123;&quot;张三&quot;,&quot;李四&quot;,&quot;王五&quot;&#125;;</span><br><span class="line">for (size_t i = 0; i &lt; 3; i++)</span><br><span class="line">&#123;</span><br><span class="line">    /* code */</span><br><span class="line">    int num = 0;</span><br><span class="line">    for (size_t j = 0; j &lt; 3; j++)</span><br><span class="line">    &#123;</span><br><span class="line">    /* code */</span><br><span class="line">        num+=score[i][j];</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; &quot;第&quot; &lt;&lt; i+1 &lt;&lt; &quot;个人&quot; &lt;&lt; name[i] &lt;&lt; &quot;的考试总成绩为&quot; &lt;&lt; num &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>输出结果<br><img src="https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E8%BF%90%E7%94%A8.png"></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C++基础（二）</title>
       <link href="/posts/27216/"/>
       <url>/posts/27216/</url>
@@ -212,7 +225,7 @@
       <link href="/posts/51637/"/>
       <url>/posts/51637/</url>
       
-        <content type="html"><![CDATA[<p>git init 在想要创建repositoory的地方点击Git Bash<br>git status 查看变化/状态<br>git add -A 添加<file><br>再次查看状态，提示changes to committed<br>git commit -m”添加你的备注，或者你修改了什么”<br>运行git log可以查看提交记录<br>git diff 查看文件做了哪些变化<br>git checkout – .撤销修改<br>git reset –hard 版本号前7位 执行版本回退<br>git reflog 查看HEAD版本变化<br>再次git reset –hard 最新版本号<br>回到最新的版本<br>git clean -xf 删除没有add的文件</p><p>如果你的文件名是中文的可能会乱码，执行以下代码<br>git config –global i18n.commitencoding utf-8<br>git config –global i18n.logoutputencoding utf-8</p><p>本地git和github的链接<br>1.github注册账号<br>2.配置你的用户和邮箱：git config –global user.name “用户名”<br>           git config –global user.email“邮箱”<br>3.生成ssh key<br>  运行ssh-keygen -t rsa -C”email”<br>  将生成的ssh key复制，执行clip &lt; ~/.ssh/id_rsa.pub<br>4.ssh -T <a href="mailto:&#x67;&#105;&#116;&#64;&#x67;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#109;">&#x67;&#105;&#116;&#64;&#x67;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#109;</a><br>查看是否链接成功<br>5.首次提交 git remote add origin git@你的github库地址<br>6.git push -u origin master 提交<br>去github上就可以看到更新</p>]]></content>
+        <content type="html"><![CDATA[<p>git init 在想要创建repositoory的地方点击Git Bash<br>git status 查看变化/状态<br>git add -A 添加<file><br>再次查看状态，提示changes to committed<br>git commit -m”添加你的备注，或者你修改了什么”<br>运行git log可以查看提交记录<br>git diff 查看文件做了哪些变化<br>git checkout – .撤销修改<br>git reset –hard 版本号前7位 执行版本回退<br>git reflog 查看HEAD版本变化<br>再次git reset –hard 最新版本号<br>回到最新的版本<br>git clean -xf 删除没有add的文件</p><p>如果你的文件名是中文的可能会乱码，执行以下代码<br>git config –global i18n.commitencoding utf-8<br>git config –global i18n.logoutputencoding utf-8</p><p>本地git和github的链接<br>1.github注册账号<br>2.配置你的用户和邮箱：git config –global user.name “用户名”<br>           git config –global user.email“邮箱”<br>3.生成ssh key<br>  运行ssh-keygen -t rsa -C”email”<br>  将生成的ssh key复制，执行clip &lt; ~/.ssh/id_rsa.pub<br>4.ssh -T <a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#x69;&#116;&#x68;&#x75;&#x62;&#x2e;&#x63;&#111;&#x6d;">&#103;&#105;&#x74;&#64;&#103;&#x69;&#116;&#x68;&#x75;&#x62;&#x2e;&#x63;&#111;&#x6d;</a><br>查看是否链接成功<br>5.首次提交 git remote add origin git@你的github库地址<br>6.git push -u origin master 提交<br>去github上就可以看到更新</p>]]></content>
       
       
       <categories>
