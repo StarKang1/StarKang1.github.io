@@ -4,6 +4,64 @@
   
     
     <entry>
+      <title>C++基础(六)</title>
+      <link href="/posts/8291/"/>
+      <url>/posts/8291/</url>
+      
+        <content type="html"><![CDATA[<h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><p>结构体属于用户自定义的数据类型，允许用户存储不同的数据类型</p><h4 id="结构体定义和使用"><a href="#结构体定义和使用" class="headerlink" title="结构体定义和使用"></a>结构体定义和使用</h4><p><strong>语法</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">struct 结构体名（结构体成员列表）;</span><br><span class="line">通过结构体创建变量的三种方式：</span><br><span class="line">struct 结构体名 变量名;</span><br><span class="line">struct 结构体名 变量名= &#123;成员变量&#125;;</span><br><span class="line">定义结构体时顺便创建变量;</span><br></pre></td></tr></table></figure><h4 id="结构体数组"><a href="#结构体数组" class="headerlink" title="结构体数组"></a>结构体数组</h4><p>作用：将自定义的结构体放入数组中方便维护<br>语法：struct 结构体名 数组名[元素个数] = </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> 笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> 结构体 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++基础（五）</title>
+      <link href="/posts/51798/"/>
+      <url>/posts/51798/</url>
+      
+        <content type="html"><![CDATA[<h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><p><strong>作用</strong></p><p>通过指针间接访问内存（指针就是一个地址）</p><p>内存编号是从0开始记录的，一般用十六进制数字表示<br>可以利用指针变量保存地址</p><h4 id="指针的使用"><a href="#指针的使用" class="headerlink" title="指针的使用"></a>指针的使用</h4><p><em>定义的语法</em><br>数据类型 * 指针变量<br>如 int *p;</p><p>//怎么使用指针<br>//通过解引用的方式来找到指针指向的地址<br>//指针前加*代表解引用，找到指针指向的内存中的数据</p><p><strong>指针所占的空间</strong><br>指针也是种数据类型，那么这种数据类型占用多少内存空间<br>在32位操作系统下，占用4个字节<br>在64位操作系统下，占用8个字节</p><p><strong>空指针</strong><br>空指针：指针变量指内存中编号为0的空间<br>用途： 初始化指针变量<br>注意：空指针指向的内存是不可以访问的<br>0~255之间的内存编号是系统占用的因此是不可以访问的<br>也就是空指针是不可以对其地址内部的数据进行修改</p><p><strong>野指针</strong><br>指针变量指向非法的内存空间</p><p><strong>const修饰指针</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">1.const 修饰指针 --- 常量指针</span><br><span class="line">2.const 修饰常量 --- 指针常量</span><br><span class="line">3.const即修饰指针，又修饰常量</span><br><span class="line">常量指针：const int * p = &amp;a;</span><br><span class="line">特点：指针的指向可以修改</span><br><span class="line">但是指针指向的值不可以修改</span><br><span class="line">例如 *p = 20;这是错的</span><br><span class="line">p = &amp;b;这是对的</span><br><span class="line">指针常量：int * const p = &amp;a;</span><br><span class="line">特点：指针的指向不可以修改</span><br><span class="line">指针指向的值可以修改</span><br><span class="line">例如 *p = 20;这是对的</span><br><span class="line">p = &amp;b;这是错的</span><br><span class="line">即修饰指针，又修饰常量: const int * const p = &amp;a;</span><br><span class="line">特点：指针的指向和指向的值都不可以修改</span><br></pre></td></tr></table></figure><h4 id="指针和数组"><a href="#指针和数组" class="headerlink" title="指针和数组"></a>指针和数组</h4><p>利用指针访问数组中的元素<br>案例：利用指针遍历数组中每一个元素</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">int arr[] = &#123;1,2,3,4,5,6,7,8,9,10&#125;;</span><br><span class="line">int * x = arr;</span><br><span class="line">for (size_t i = 0; i &lt; 9; i++)</span><br><span class="line">&#123;</span><br><span class="line">    /* code */</span><br><span class="line">    cout &lt;&lt; &quot;利用指针指向数组的第&quot;&lt;&lt;i&lt;&lt;&quot;个元素&quot;&lt;&lt;*x &lt;&lt;endl;</span><br><span class="line">    x++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="指针和函数"><a href="#指针和函数" class="headerlink" title="指针和函数"></a>指针和函数</h4><p><strong>指针和函数</strong><br>案例描述：封装一个函数，利用冒泡排序，实现整型数组的升序排列<br>例如数组：int arr[10] = {4,3,6,9,1,2,10,8,7,5};</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">void bubbleSort(int *arr, int len )</span><br><span class="line">&#123;</span><br><span class="line">for (int i = 0; i &lt; len-1; i++)</span><br><span class="line">&#123;</span><br><span class="line">/* code */</span><br><span class="line">for (int j = 0; j &lt; len-i-1; j++)</span><br><span class="line">&#123;</span><br><span class="line">/* code */</span><br><span class="line">if (arr[j] &gt; arr[j+1])</span><br><span class="line">&#123;</span><br><span class="line">int temp = arr[j];</span><br><span class="line">arr[j] = arr[j+1];</span><br><span class="line">arr[j+1] = temp;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">for (size_t i = 0; i &lt; 10; i++)</span><br><span class="line">&#123;</span><br><span class="line">/* code */</span><br><span class="line">cout &lt;&lt; &quot;arr[&quot;&lt;&lt; i &lt;&lt;&quot;]=&quot;&lt;&lt;arr[i] &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p><img src="https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E5%B0%81%E8%A3%85.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> 笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> 指针 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C++基础(四)</title>
       <link href="/posts/34325/"/>
       <url>/posts/34325/</url>
@@ -270,7 +328,7 @@
       <link href="/posts/51637/"/>
       <url>/posts/51637/</url>
       
-        <content type="html"><![CDATA[<p>git init 在想要创建repositoory的地方点击Git Bash<br>git status 查看变化/状态<br>git add -A 添加<file><br>再次查看状态，提示changes to committed<br>git commit -m”添加你的备注，或者你修改了什么”<br>运行git log可以查看提交记录<br>git diff 查看文件做了哪些变化<br>git checkout – .撤销修改<br>git reset –hard 版本号前7位 执行版本回退<br>git reflog 查看HEAD版本变化<br>再次git reset –hard 最新版本号<br>回到最新的版本<br>git clean -xf 删除没有add的文件</p><p>如果你的文件名是中文的可能会乱码，执行以下代码<br>git config –global i18n.commitencoding utf-8<br>git config –global i18n.logoutputencoding utf-8</p><p>本地git和github的链接<br>1.github注册账号<br>2.配置你的用户和邮箱：git config –global user.name “用户名”<br>           git config –global user.email“邮箱”<br>3.生成ssh key<br>  运行ssh-keygen -t rsa -C”email”<br>  将生成的ssh key复制，执行clip &lt; ~/.ssh/id_rsa.pub<br>4.ssh -T <a href="mailto:&#103;&#x69;&#116;&#x40;&#x67;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#x6d;">&#103;&#x69;&#116;&#x40;&#x67;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#x6d;</a><br>查看是否链接成功<br>5.首次提交 git remote add origin git@你的github库地址<br>6.git push -u origin master 提交<br>去github上就可以看到更新</p>]]></content>
+        <content type="html"><![CDATA[<p>git init 在想要创建repositoory的地方点击Git Bash<br>git status 查看变化/状态<br>git add -A 添加<file><br>再次查看状态，提示changes to committed<br>git commit -m”添加你的备注，或者你修改了什么”<br>运行git log可以查看提交记录<br>git diff 查看文件做了哪些变化<br>git checkout – .撤销修改<br>git reset –hard 版本号前7位 执行版本回退<br>git reflog 查看HEAD版本变化<br>再次git reset –hard 最新版本号<br>回到最新的版本<br>git clean -xf 删除没有add的文件</p><p>如果你的文件名是中文的可能会乱码，执行以下代码<br>git config –global i18n.commitencoding utf-8<br>git config –global i18n.logoutputencoding utf-8</p><p>本地git和github的链接<br>1.github注册账号<br>2.配置你的用户和邮箱：git config –global user.name “用户名”<br>           git config –global user.email“邮箱”<br>3.生成ssh key<br>  运行ssh-keygen -t rsa -C”email”<br>  将生成的ssh key复制，执行clip &lt; ~/.ssh/id_rsa.pub<br>4.ssh -T <a href="mailto:&#x67;&#105;&#x74;&#x40;&#103;&#105;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#x40;&#103;&#105;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;</a><br>查看是否链接成功<br>5.首次提交 git remote add origin git@你的github库地址<br>6.git push -u origin master 提交<br>去github上就可以看到更新</p>]]></content>
       
       
       <categories>
