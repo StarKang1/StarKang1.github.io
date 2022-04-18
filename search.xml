@@ -4,6 +4,58 @@
   
     
     <entry>
+      <title>Disable specific warnings from cpplint</title>
+      <link href="/posts/62265/"/>
+      <url>/posts/62265/</url>
+      
+        <content type="html"><![CDATA[<p>git init 在想要创建repositoory的地方点击Git Bash</p><p>编写c++文件时出现警告，cpplint warning</p><p>打开文件-&gt;首选项-&gt;设置-&gt;搜索filter，输入以下</p><p>![](<a href="https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/cpplint">https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/cpplint</a> warning.png)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 问题 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> BUG </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++核心编程(四)</title>
+      <link href="/posts/9157/"/>
+      <url>/posts/9157/</url>
+      
+        <content type="html"><![CDATA[<h3 id="5文件操作"><a href="#5文件操作" class="headerlink" title="5文件操作"></a>5文件操作</h3><p>程序运行时产生的数据都属于临时文件数据，程序一旦运行结束都会被释放</p><p>通过文件可以将数据持久化</p><p>C++中对文件操作需要包含头文件<fstream></p><p>文件类型分为两种：</p><p>1.文本文件 —文件以文本的ASCII码形式存储在计算机中</p><p>2.二进制文件—文件以文本的二进制形式存储在计算机中，用户一般不能直接读懂</p><p><strong>操作文件的三大类</strong> </p><p>1.ofstream : 写操作</p><p>2.ifstream : 读操作</p><p>3.fstream ： 读写操作</p><h4 id="5-1文本文件"><a href="#5-1文本文件" class="headerlink" title="5.1文本文件"></a>5.1文本文件</h4><h5 id="5-1-1-写文件"><a href="#5-1-1-写文件" class="headerlink" title="5.1.1 写文件"></a>5.1.1 写文件</h5><p>写文件步骤如下：：</p><p>1.包含头文件</p><p>#include<fstream></p><p>2.创建流对象</p><p>ofstream ofs;</p><p>3.打开文件</p><p>ofs.open(“文件路径”，打开文件)</p><p>4.写数据</p><p>ofs &lt;&lt; “写入的数据”</p><p>5.关闭文件</p><p>ofs.close();</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> 笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C++核心编程(三)</title>
       <link href="/posts/46393/"/>
       <url>/posts/46393/</url>
@@ -476,7 +528,7 @@
       <link href="/posts/51637/"/>
       <url>/posts/51637/</url>
       
-        <content type="html"><![CDATA[<p>git init 在想要创建repositoory的地方点击Git Bash<br>git status 查看变化/状态<br>git add -A 添加<file><br>再次查看状态，提示changes to committed<br>git commit -m”添加你的备注，或者你修改了什么”<br>运行git log可以查看提交记录<br>git diff 查看文件做了哪些变化<br>git checkout – .撤销修改<br>git reset –hard 版本号前7位 执行版本回退<br>git reflog 查看HEAD版本变化<br>再次git reset –hard 最新版本号<br>回到最新的版本<br>git clean -xf 删除没有add的文件</p><p>如果你的文件名是中文的可能会乱码，执行以下代码<br>git config –global i18n.commitencoding utf-8<br>git config –global i18n.logoutputencoding utf-8</p><p>本地git和github的链接<br>1.github注册账号<br>2.配置你的用户和邮箱：git config –global user.name “用户名”<br>           git config –global user.email“邮箱”<br>3.生成ssh key<br>  运行ssh-keygen -t rsa -C”email”<br>  将生成的ssh key复制，执行clip &lt; ~/.ssh/id_rsa.pub<br>4.ssh -T <a href="mailto:&#x67;&#x69;&#116;&#x40;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#x6f;&#109;">&#x67;&#x69;&#116;&#x40;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#x6f;&#109;</a><br>查看是否链接成功<br>5.首次提交 git remote add origin git@你的github库地址<br>6.git push -u origin master 提交<br>去github上就可以看到更新</p>]]></content>
+        <content type="html"><![CDATA[<p>git init 在想要创建repositoory的地方点击Git Bash<br>git status 查看变化/状态<br>git add -A 添加<file><br>再次查看状态，提示changes to committed<br>git commit -m”添加你的备注，或者你修改了什么”<br>运行git log可以查看提交记录<br>git diff 查看文件做了哪些变化<br>git checkout – .撤销修改<br>git reset –hard 版本号前7位 执行版本回退<br>git reflog 查看HEAD版本变化<br>再次git reset –hard 最新版本号<br>回到最新的版本<br>git clean -xf 删除没有add的文件</p><p>如果你的文件名是中文的可能会乱码，执行以下代码<br>git config –global i18n.commitencoding utf-8<br>git config –global i18n.logoutputencoding utf-8</p><p>本地git和github的链接<br>1.github注册账号<br>2.配置你的用户和邮箱：git config –global user.name “用户名”<br>           git config –global user.email“邮箱”<br>3.生成ssh key<br>  运行ssh-keygen -t rsa -C”email”<br>  将生成的ssh key复制，执行clip &lt; ~/.ssh/id_rsa.pub<br>4.ssh -T <a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#109;">&#103;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#109;</a><br>查看是否链接成功<br>5.首次提交 git remote add origin git@你的github库地址<br>6.git push -u origin master 提交<br>去github上就可以看到更新</p>]]></content>
       
       
       <categories>
