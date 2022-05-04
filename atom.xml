@@ -6,7 +6,7 @@
   <link href="https://starkang1.top/atom.xml" rel="self"/>
   
   <link href="https://starkang1.top/"/>
-  <updated>2022-04-18T13:24:45.713Z</updated>
+  <updated>2022-05-04T05:53:41.536Z</updated>
   <id>https://starkang1.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://starkang1.top/posts/62265/"/>
     <id>https://starkang1.top/posts/62265/</id>
     <published>2022-04-16T15:50:09.000Z</published>
-    <updated>2022-04-18T13:24:45.713Z</updated>
+    <updated>2022-05-04T05:53:41.536Z</updated>
     
     <content type="html"><![CDATA[<p>git init 在想要创建repositoory的地方点击Git Bash</p><p>编写c++文件时出现警告，cpplint warning</p><p>打开文件-&gt;首选项-&gt;设置-&gt;搜索filter，输入以下</p><p>![](<a href="https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/cpplint">https://cdn.jsdelivr.net/gh/StarKang1/picgopicture/img/cpplint</a> warning.png)</p>]]></content>
     
@@ -48,7 +48,7 @@
     <link href="https://starkang1.top/posts/9157/"/>
     <id>https://starkang1.top/posts/9157/</id>
     <published>2022-04-16T12:57:54.000Z</published>
-    <updated>2022-04-18T13:26:06.502Z</updated>
+    <updated>2022-05-04T06:01:29.584Z</updated>
     
     <content type="html"><![CDATA[<h3 id="5文件操作"><a href="#5文件操作" class="headerlink" title="5文件操作"></a>5文件操作</h3><p>程序运行时产生的数据都属于临时文件数据，程序一旦运行结束都会被释放</p><p>通过文件可以将数据持久化</p><p>C++中对文件操作需要包含头文件<fstream></p><p>文件类型分为两种：</p><p>1.文本文件 —文件以文本的ASCII码形式存储在计算机中</p><p>2.二进制文件—文件以文本的二进制形式存储在计算机中，用户一般不能直接读懂</p><p><strong>操作文件的三大类</strong> </p><p>1.ofstream : 写操作</p><p>2.ifstream : 读操作</p><p>3.fstream ： 读写操作</p><h4 id="5-1文本文件"><a href="#5-1文本文件" class="headerlink" title="5.1文本文件"></a>5.1文本文件</h4><h5 id="5-1-1-写文件"><a href="#5-1-1-写文件" class="headerlink" title="5.1.1 写文件"></a>5.1.1 写文件</h5><p>写文件步骤如下：：</p><p>1.包含头文件</p><p>#include<fstream></p><p>2.创建流对象</p><p>ofstream ofs;</p><p>3.打开文件</p><p>ofs.open(“文件路径”，打开文件)</p><p>4.写数据</p><p>ofs &lt;&lt; “写入的数据”</p><p>5.关闭文件</p><p>ofs.close();</p>]]></content>
     
