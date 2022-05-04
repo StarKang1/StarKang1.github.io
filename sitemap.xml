@@ -227,15 +227,6 @@
   </url>
   
   <url>
-    <loc>https://starkang1.top/music/</loc>
-    
-    <lastmod>2022-03-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://starkang1.top/movies/</loc>
     
     <lastmod>2022-03-18</lastmod>
@@ -246,6 +237,15 @@
   
   <url>
     <loc>https://starkang1.top/tags/</loc>
+    
+    <lastmod>2022-03-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://starkang1.top/music/</loc>
     
     <lastmod>2022-03-18</lastmod>
     
@@ -317,6 +317,13 @@
 
   
   <url>
+    <loc>https://starkang1.top/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
+    <lastmod>2022-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://starkang1.top/tags/%E7%94%B5%E8%B5%9B/</loc>
     <lastmod>2022-05-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -339,13 +346,6 @@
   
   <url>
     <loc>https://starkang1.top/tags/Butterfly/</loc>
-    <lastmod>2022-05-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://starkang1.top/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
     <lastmod>2022-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -452,6 +452,13 @@
 
   
   <url>
+    <loc>https://starkang1.top/categories/%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2022-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://starkang1.top/categories/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-05-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -466,7 +473,7 @@
   </url>
   
   <url>
-    <loc>https://starkang1.top/categories/%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://starkang1.top/categories/%E5%AD%A6%E4%B9%A0/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -474,13 +481,6 @@
   
   <url>
     <loc>https://starkang1.top/categories/%E7%AC%94%E8%AE%B0/%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2022-05-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://starkang1.top/categories/%E5%AD%A6%E4%B9%A0/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
