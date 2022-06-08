@@ -5863,7 +5863,7 @@ blockquote.pullquote.right {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.7);
+  background-color: transparent;
   content: '';
 }
 [data-theme='dark'] #article-container code {
@@ -5889,7 +5889,7 @@ blockquote.pullquote.right {
 }
 [data-theme='dark'] #page-header.nav-fixed > #nav,
 [data-theme='dark'] #page-header.not-top-img > #nav {
-  background: rgba(18,18,18,0.8);
+  background: transparent;
   -webkit-box-shadow: 0 5px 6px -5px rgba(133,133,133,0);
   box-shadow: 0 5px 6px -5px rgba(133,133,133,0);
 }

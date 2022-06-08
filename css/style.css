@@ -19,7 +19,7 @@
 }
 
 
-/*夜间模式伪类遮罩层透明*/
+/* 夜间模式伪类遮罩层透明 */
 
 [data-theme="dark"] #footer::before {
     background: transparent;
