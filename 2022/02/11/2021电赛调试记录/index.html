@@ -1,0 +1,196 @@
+<!DOCTYPE html><html lang="ch" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>2021电赛调试记录 | WayJay's Blog</title><meta name="author" content="WayJay"><meta name="copyright" content="WayJay"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="三相逆变调板记录2021-8-4 1.修改了scope触发通道到第1通道，触发值改大，确保稳定触发看RAM波形。改scope.prescaler值分辨RAM波形是否在刷新。 2.示波器有50欧内阻那组，接到逆变三相负载电阻会导致三相不平衡，示波器要切到1M欧内阻 3.AD采样绝对偏移要用软件大低通滤波校正。后续电流采样也要如此校正 4.大调制比0.95时A相波峰有失真现象，交换相IR2110模块后">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2021电赛调试记录">
+<meta property="og:url" content="http://example.com/2022/02/11/2021%E7%94%B5%E8%B5%9B%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="WayJay&#39;s Blog">
+<meta property="og:description" content="三相逆变调板记录2021-8-4 1.修改了scope触发通道到第1通道，触发值改大，确保稳定触发看RAM波形。改scope.prescaler值分辨RAM波形是否在刷新。 2.示波器有50欧内阻那组，接到逆变三相负载电阻会导致三相不平衡，示波器要切到1M欧内阻 3.AD采样绝对偏移要用软件大低通滤波校正。后续电流采样也要如此校正 4.大调制比0.95时A相波峰有失真现象，交换相IR2110模块后">
+<meta property="og:locale">
+<meta property="og:image" content="https://picsum.photos/id/371/300/300">
+<meta property="article:published_time" content="2022-02-10T17:08:19.000Z">
+<meta property="article:modified_time" content="2024-01-02T07:42:26.017Z">
+<meta property="article:author" content="WayJay">
+<meta property="article:tag" content="电赛">
+<meta property="article:tag" content="笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://picsum.photos/id/371/300/300"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/02/11/2021%E7%94%B5%E8%B5%9B%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '2021电赛调试记录',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-01-02 15:42:26'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.0.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://img.wxcha.com/file/201808/31/9b99c1b0d7.jpg?down" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">8</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-shouye"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-navicon-wzgl"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw iconfont icon-ziyuanxhdpi"></i><span> 日志</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw iconfont icon-24gl-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw iconfont icon-24gl-folderOpen"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-xiuxiankafeiyule"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw iconfont icon-vynil"></i><span> 歌单</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw iconfont icon-dianying1"></i><span> 电影</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw iconfont icon-yuedu1"></i><span> 阅读</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw iconfont icon-youxi"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw iconfont icon-tukuxiangce"></i><span> 图库</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 其他</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw iconfont icon-lianjie"></i><span> 友链</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw iconfont icon-guanyu1"></i><span> 关于</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/guestbook/"><i class="fa-fw iconfont icon-liuyanban-05"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://picsum.photos/id/371/300/300')"><nav id="nav"><span id="blog-info"><a href="/" title="WayJay's Blog"><span class="site-name">WayJay's Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-shouye"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-navicon-wzgl"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw iconfont icon-ziyuanxhdpi"></i><span> 日志</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw iconfont icon-24gl-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw iconfont icon-24gl-folderOpen"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-xiuxiankafeiyule"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw iconfont icon-vynil"></i><span> 歌单</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw iconfont icon-dianying1"></i><span> 电影</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw iconfont icon-yuedu1"></i><span> 阅读</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw iconfont icon-youxi"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw iconfont icon-tukuxiangce"></i><span> 图库</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 其他</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw iconfont icon-lianjie"></i><span> 友链</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw iconfont icon-guanyu1"></i><span> 关于</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/guestbook/"><i class="fa-fw iconfont icon-liuyanban-05"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">2021电赛调试记录</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-02-10T17:08:19.000Z" title="Created 2022-02-11 01:08:19">2022-02-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-01-02T07:42:26.017Z" title="Updated 2024-01-02 15:42:26">2024-01-02</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="2021电赛调试记录"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>三相逆变调板记录2021-8-4</p>
+<p>1.修改了scope触发通道到第1通道，触发值改大，确保稳定触发看RAM波形。改scope.prescaler值分辨RAM波形是否在刷新。</p>
+<p>2.示波器有50欧内阻那组，接到逆变三相负载电阻会导致三相不平衡，示波器要切到1M欧内阻</p>
+<p>3.AD采样绝对偏移要用软件大低通滤波校正。后续电流采样也要如此校正</p>
+<p>4.大调制比0.95时A相波峰有失真现象，交换相IR2110模块后依旧，怀疑是MOS板问题，用换相法锁定问题位置，信号板、MOS板、IR2110板、电阻板、LC板这5个中的哪一个。</p>
+<p>5.clarke输出alpha,beta取模后，有低频脉动，主要是谐波或三相不对称引起，说明不大适用于反馈闭环，建议用一相的线电压有效值做为反馈闭环控制，展示测量时，要注意用算有效值的那个线电压进行展示测量。<br>用于闭环的反馈线电压要做好深度滤波从而只让基波50Hz进入闭环反馈。有效值脉动大小还有待观测。</p>
+<p>6.改SVPWM后，实验电压提高了15%，电阻端相电压看不到马鞍波形，马鞍波形含有3次谐波被差分掉了，如果是相对逆变器地估计能看到马鞍波形</p>
+<p>7.后续可以提高开关频率或优化死区或优化LC参数，改善失真。提高开关频率时，要注意中断服务函数不要超过开关周期。</p>
+<p>8.要理顺功率板、信号板、换载板的ABC相序对应关系，做好标记。</p>
+<p>三相逆变调板记录2021.08.07</p>
+<p>1.IRF540耐压值100V，在母线电压升至60V，IR2110模块使用20欧驱动电阻尖峰值有可能将其击穿,后续可以替换成IRF640（耐压200V）</p>
+<p>2.电压通过运放的电压跟随器有可能触底，这时候可以采用去除运放，将电压分压并在其输出端接一个反向二极管接入采用口</p>
+<p>3.软件很经常会出现问题，需要及时备份</p>
+<p>4.功率板布线不合理有可能导致测量时出现的尖峰</p>
+<p>5.负载模块带重载的滤波效果可能会比带轻载好</p>
+<p>6.较高电压的线尽量远离较低电压的线，避免出现通信异常</p>
+<p>7.IR2110模块驱动电阻为20欧姆时，上升沿时间大概为0.2us，当其为47欧姆时，上升沿时间大概为0.5us</p>
+<p>8.软件示波器有可能出现错误，这时候先排查硬件问题，再重启软件</p>
+<p>9.在比赛期间测试波形时，尽量测试差分信号，放大为1-2个周期观察波形</p>
+<p>10.将开关频率从16K改成32K时要记得测试中断时间是否够</p>
+<p>11.调试过程中发现电流不正常立马断电检查电路，以免烧板</p>
+<p>12.去掉运放之后的采样电压还未达到饱和，波形就开始失真了</p>
+<p>2021.11.1调试记录</p>
+<p>1.CSD19535寄生电容大约是IRF640的三倍，因此在同样的RC时间常数情况下，CSD19535需要的驱动电阻大约只需要IRF640的三分之一</p>
+<p>2.RC吸收电路：在MOS管关闭时，C吸收尖峰能量，同时R来消耗，C的大小决定了吸收的大小，如果C过大，意味着R需要消耗的功率也就越大<br>这需要就需要确定合适的RC参数，RC 参数乘积大概在导通时间的三分之一到五分之一，假设，我们选取0.5us的死区时间，那么RC&#x3D;0.1us，<br>如果选取R&#x3D;100欧，那么需要的电容就等于102.</p>
+<p>3.关于示波器问题，使用不同的表笔就出来的波形也有点不一样，这就不清楚哪个是真的了</p>
+<p>4.IRF640在带母线测试时，波形的上升沿和上升沿近似相同，上升时间和下降时间也相同，采用IRF640可能是比较好的方案（前提示波器没有问题）</p>
+<p>5.硬件部分，优化了布线，MOS管环路面积要小，VCC-GND-LS，使用RC吸收电路吸收尖峰（尖峰大小也和环路面积有关）</p>
+<p>6.下一步计划：重做信号板，重做功率板，滤波参数确定以及滤波板的重新设计<br>2021.11.2调试记录<br>1.IRF640选择100欧驱动电阻，去掉二极管，加RC吸收尖峰，出来的方波正常</p>
+<p>2021.11.05调试记录</p>
+<p>1.新增了电压电流保护，触发pwm关闭<br>2.新增了电流采样，电流滤波<br>3.关于软件的克拉克变换与派克变换验证相位正常</p>
+<p>2021.11.06调试记录</p>
+<p>1.滤波板方向方向导致电流过大，MOS管发热严重<br>2.pwm整流输出稳压方向：三相逆变电流闭环，在完成闭环后，将三相交流电从从负载接入端接入，再将pi给定电流转换为-Id，<br>以及将给定相位用相电压相位替代，这就完成了PWM整流加电流闭环<br>3.在做电流采样板时要注意分压电阻大小以及误差<br>4.霍尔传感器中间绕线，中间电流1A，走线电流为1&#x2F;3A<br>5.采样电流实际值与标幺值之比为8:1；<br>6.软件调试，上升沿观察-将cnt改为大于0触发，下降沿观察-将cnt改为大于1小于128触发<br>7.AD校正-将占空比给0，观察电压与0点的差值，并将波形校正至零点<br>8.电流校正：将学生电源设置为恒流模式，将导线穿过霍尔传感器，采样电流转换为实际电流的1&#x2F;3；</p>
+<p>2021.11.11反思</p>
+<p>比赛结束了<br>闭环时电压还是掉下来了<br>没有办法，我想可能还是LC参数不匹配<br>当时成功的那一次刚好有1000u的电容，电压上去了，闭环也成功了，这就说明代码没有问题<br>我太慌乱了，我很抱歉，这一点没有想到<br>如果当时可以想到这一点就好了</p>
+<p>2021.12.01总结</p>
+<p>在比赛结束后，终于实现了电压可调，只是调的范围不大，pi_udc的输出需要限幅，不然会导致输出母线电压过大或者电流过大<br>功率因数也可实现0.92调节至0.99，转换效率暂且还没看，但是基本功能应该是完成了</p>
+<p>2022.03.30</p>
+<p>时隔多日，我又开始回顾了一遍当时做的实验，发现都忘记的差不多了，工科可能就是这样，需要不断的去积累经验，做好笔记，才真正有可能学到东西，当发现一件事情比较麻烦，也不要逃避，就大胆去做，就像我当时去参加电赛一样，本来什么都不会，但是在比赛过程中，我才发现完完整整去做一个项目是需要花费时间的，也是非常困难的，这就需要我们不断去试错，不断去改错，结果或许是重要的，但对于我来说，过程比结果更重要。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://example.com">WayJay</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://example.com/2022/02/11/2021%E7%94%B5%E8%B5%9B%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/">http://example.com/2022/02/11/2021%E7%94%B5%E8%B5%9B%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%94%B5%E8%B5%9B/">电赛</a><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a></div><div class="post_share"><div class="social-share" data-image="https://picsum.photos/id/371/300/300" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/02/11/hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/" title="hexo博客部署的基本指令"><img class="cover" src="https://picsum.photos/id/273/300/300" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous</div><div class="prev_info">hexo博客部署的基本指令</div></div></a></div><div class="next-post pull-right"><a href="/2022/02/10/git%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/" title="git基本指令"><img class="cover" src="https://picsum.photos/id/9/300/300" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next</div><div class="next_info">git基本指令</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2022/02/11/hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/" title="hexo博客部署的基本指令"><img class="cover" src="https://picsum.photos/id/273/300/300" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-11</div><div class="title">hexo博客部署的基本指令</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://img.wxcha.com/file/201808/31/9b99c1b0d7.jpg?down" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">WayJay</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">8</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/StarKang1" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://gitee.com/xu-weijian" target="_blank" title=""><i class="iconfont icon-gitee"></i></a><a class="social-icon" href="mailto:xwj1154176815@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/16/Disable-specific-warnings-from-cpplint/" title="Disable specific warnings from cpplint"><img src="https://picsum.photos/id/88/300/300" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Disable specific warnings from cpplint"/></a><div class="content"><a class="title" href="/2022/04/16/Disable-specific-warnings-from-cpplint/" title="Disable specific warnings from cpplint">Disable specific warnings from cpplint</a><time datetime="2022-04-16T15:50:09.000Z" title="Created 2022-04-16 23:50:09">2022-04-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/16/C-%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B-%E5%9B%9B/" title="C++核心编程(四)"><img src="https://picsum.photos/id/76/300/300" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++核心编程(四)"/></a><div class="content"><a class="title" href="/2022/04/16/C-%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B-%E5%9B%9B/" title="C++核心编程(四)">C++核心编程(四)</a><time datetime="2022-04-16T12:57:54.000Z" title="Created 2022-04-16 20:57:54">2022-04-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/12/C-%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B-%E4%B8%89/" title="C++核心编程(三)"><img src="https://picsum.photos/id/100/300/300" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++核心编程(三)"/></a><div class="content"><a class="title" href="/2022/04/12/C-%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B-%E4%B8%89/" title="C++核心编程(三)">C++核心编程(三)</a><time datetime="2022-04-12T14:21:31.000Z" title="Created 2022-04-12 22:21:31">2022-04-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/12/C-%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B-%E4%BA%8C/" title="C++核心编程(二)"><img src="https://picsum.photos/id/345/300/300" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++核心编程(二)"/></a><div class="content"><a class="title" href="/2022/04/12/C-%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B-%E4%BA%8C/" title="C++核心编程(二)">C++核心编程(二)</a><time datetime="2022-04-11T16:11:39.000Z" title="Created 2022-04-12 00:11:39">2022-04-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/05/%E5%BC%80%E6%BA%90%E8%BD%BB%E9%87%8F%E6%98%BE%E7%A4%BA%E6%A1%86%E6%9E%B6lvgl/" title="开源轻量显示框架lvgl"><img src="https://w.wallhaven.cc/full/rd/wallhaven-rdwjj7.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="开源轻量显示框架lvgl"/></a><div class="content"><a class="title" href="/2022/04/05/%E5%BC%80%E6%BA%90%E8%BD%BB%E9%87%8F%E6%98%BE%E7%A4%BA%E6%A1%86%E6%9E%B6lvgl/" title="开源轻量显示框架lvgl">开源轻量显示框架lvgl</a><time datetime="2022-04-05T08:28:10.000Z" title="Created 2022-04-05 16:28:10">2022-04-05</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By WayJay</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

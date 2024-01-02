@@ -1,0 +1,274 @@
+<!DOCTYPE html><html lang="ch" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>10种软件滤波方法 | WayJay's Blog</title><meta name="author" content="WayJay"><meta name="copyright" content="WayJay"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="软件滤波学习笔记限幅滤波法方法：根据经验判断，确定两次采样允许的最大偏差值（设为A） 每次检测到新值时判断： 如果本次值与上次值之差&lt;&#x3D;A本次值有效 如果本次值与上次值之差&gt;A,放弃本次值，用上次值代替本次值 优点：有效克服偶然因素引起的脉冲干扰 缺点： 无法抑制周期性干扰 平滑度差 1234567891011121314&#x2F;*  A值可根据实际情况调整    value为有效">
+<meta property="og:type" content="article">
+<meta property="og:title" content="10种软件滤波方法">
+<meta property="og:url" content="http://example.com/2022/03/07/10%E7%A7%8D%E8%BD%AF%E4%BB%B6%E6%BB%A4%E6%B3%A2%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:site_name" content="WayJay&#39;s Blog">
+<meta property="og:description" content="软件滤波学习笔记限幅滤波法方法：根据经验判断，确定两次采样允许的最大偏差值（设为A） 每次检测到新值时判断： 如果本次值与上次值之差&lt;&#x3D;A本次值有效 如果本次值与上次值之差&gt;A,放弃本次值，用上次值代替本次值 优点：有效克服偶然因素引起的脉冲干扰 缺点： 无法抑制周期性干扰 平滑度差 1234567891011121314&#x2F;*  A值可根据实际情况调整    value为有效">
+<meta property="og:locale">
+<meta property="og:image" content="https://picsum.photos/id/318/300/300">
+<meta property="article:published_time" content="2022-03-07T05:32:24.000Z">
+<meta property="article:modified_time" content="2024-01-02T07:42:26.017Z">
+<meta property="article:author" content="WayJay">
+<meta property="article:tag" content="嵌入式">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://picsum.photos/id/318/300/300"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/03/07/10%E7%A7%8D%E8%BD%AF%E4%BB%B6%E6%BB%A4%E6%B3%A2%E6%96%B9%E6%B3%95/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '10种软件滤波方法',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-01-02 15:42:26'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.0.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://img.wxcha.com/file/201808/31/9b99c1b0d7.jpg?down" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">8</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-shouye"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-navicon-wzgl"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw iconfont icon-ziyuanxhdpi"></i><span> 日志</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw iconfont icon-24gl-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw iconfont icon-24gl-folderOpen"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-xiuxiankafeiyule"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw iconfont icon-vynil"></i><span> 歌单</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw iconfont icon-dianying1"></i><span> 电影</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw iconfont icon-yuedu1"></i><span> 阅读</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw iconfont icon-youxi"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw iconfont icon-tukuxiangce"></i><span> 图库</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 其他</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw iconfont icon-lianjie"></i><span> 友链</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw iconfont icon-guanyu1"></i><span> 关于</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/guestbook/"><i class="fa-fw iconfont icon-liuyanban-05"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://picsum.photos/id/318/300/300')"><nav id="nav"><span id="blog-info"><a href="/" title="WayJay's Blog"><span class="site-name">WayJay's Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-shouye"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-navicon-wzgl"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw iconfont icon-ziyuanxhdpi"></i><span> 日志</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw iconfont icon-24gl-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw iconfont icon-24gl-folderOpen"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-xiuxiankafeiyule"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw iconfont icon-vynil"></i><span> 歌单</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw iconfont icon-dianying1"></i><span> 电影</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw iconfont icon-yuedu1"></i><span> 阅读</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw iconfont icon-youxi"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw iconfont icon-tukuxiangce"></i><span> 图库</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 其他</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw iconfont icon-lianjie"></i><span> 友链</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw iconfont icon-guanyu1"></i><span> 关于</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/guestbook/"><i class="fa-fw iconfont icon-liuyanban-05"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">10种软件滤波方法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-03-07T05:32:24.000Z" title="Created 2022-03-07 13:32:24">2022-03-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-01-02T07:42:26.017Z" title="Updated 2024-01-02 15:42:26">2024-01-02</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="10种软件滤波方法"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="软件滤波学习笔记"><a href="#软件滤波学习笔记" class="headerlink" title="软件滤波学习笔记"></a>软件滤波学习笔记</h1><h2 id="限幅滤波法"><a href="#限幅滤波法" class="headerlink" title="限幅滤波法"></a>限幅滤波法</h2><p>方法：根据经验判断，确定两次采样允许的最大偏差值（设为A）</p>
+<p>每次检测到新值时判断：</p>
+<p>如果本次值与上次值之差&lt;&#x3D;A本次值有效</p>
+<p>如果本次值与上次值之差&gt;A,放弃本次值，用上次值代替本次值</p>
+<p>优点：有效克服偶然因素引起的脉冲干扰</p>
+<p>缺点：</p>
+<p>无法抑制周期性干扰</p>
+<p>平滑度差</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/*  A值可根据实际情况调整</span><br><span class="line">    value为有效值，new_value为当前采样值  </span><br><span class="line">    滤波程序返回有效的实际值  */</span><br><span class="line">#define A 10</span><br><span class="line">char value;</span><br><span class="line"></span><br><span class="line">char filter()</span><br><span class="line">&#123;</span><br><span class="line">   char  new_value;</span><br><span class="line">   new_value = get_ad();</span><br><span class="line">   if ( ( new_value - value &gt; A ) || ( value - new_value &gt; A )</span><br><span class="line">      return value;</span><br><span class="line">   return new_value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="中位值滤波法"><a href="#中位值滤波法" class="headerlink" title="中位值滤波法"></a>中位值滤波法</h2><p>方法：连续采样N次（N取奇数）</p>
+<p>把N次采样大小排列</p>
+<p>取中间值为本次有效值</p>
+<p>优点：</p>
+<p>能有效克服因为偶然因素引起的波动干扰</p>
+<p>对温度、液位的变化缓慢的被测参数有良好的滤波效果</p>
+<p>缺点：</p>
+<p>对流量、速度等快速变化的参数起不到效果</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">/*  N值可根据实际情况调整</span><br><span class="line">    排序采用冒泡法*/</span><br><span class="line">#define N  11</span><br><span class="line"></span><br><span class="line">char filter()</span><br><span class="line">&#123;</span><br><span class="line">   char value_buf[N];</span><br><span class="line">   char count,i,j,temp;</span><br><span class="line">   for ( count=0;count&lt;N;count++)</span><br><span class="line">   &#123;</span><br><span class="line">      value_buf[count] = get_ad();</span><br><span class="line">      delay();</span><br><span class="line">   &#125;</span><br><span class="line">   for (j=0;j&lt;N-1;j++)</span><br><span class="line">   &#123;</span><br><span class="line">      for (i=0;i&lt;N-j;i++)</span><br><span class="line">      &#123;</span><br><span class="line">         if ( value_buf[i]&gt;value_buf[i+1] )</span><br><span class="line">         &#123;</span><br><span class="line">            temp = value_buf[i];</span><br><span class="line">            value_buf[i] = value_buf[i+1]; </span><br><span class="line">             value_buf[i+1] = temp;</span><br><span class="line">         &#125;</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   return value_buf[(N-1)/2];</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="算术平均滤波法"><a href="#算术平均滤波法" class="headerlink" title="算术平均滤波法"></a>算术平均滤波法</h2><p>方法:</p>
+<p>连续取N个采样值进行算术平均运算</p>
+<p>N值较大时，信号平滑度高，灵敏度较差</p>
+<p>N值较小时：信号平滑度较低，灵敏度较高</p>
+<p>N值的选取：一般流量N&#x3D;12；压力N&#x3D;4</p>
+<p>优点：</p>
+<p>适用于对一般具有随机干扰的信号进行滤波</p>
+<p>这样的信号有一个特点：有一个平均值，信号在某一数值范围附近上下波动</p>
+<p>缺点：</p>
+<p>对于测量速度较慢或要求数据计算速度较快的实时控制不适用</p>
+<p>比较浪费RAM</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#define N 12</span><br><span class="line"></span><br><span class="line">char filter()</span><br><span class="line">&#123;</span><br><span class="line">   int  sum = 0;</span><br><span class="line">   for ( count=0;count&lt;N;count++)</span><br><span class="line">   &#123;</span><br><span class="line">      sum + = get_ad();</span><br><span class="line">      delay();</span><br><span class="line">   &#125;</span><br><span class="line">   return (char)(sum/N);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="递推平均滤波法（滑动平均滤波法）"><a href="#递推平均滤波法（滑动平均滤波法）" class="headerlink" title="递推平均滤波法（滑动平均滤波法）"></a>递推平均滤波法（滑动平均滤波法）</h2><p>方法：</p>
+<p>将连续N个采样值看成一个队列</p>
+<p>队列长度固定为N</p>
+<p>每次采样到一个新数据放入队尾，并扔掉原来队首的一次数据。（先进先出原则）</p>
+<p>再把队列中的N个数据进行算术平均运算，就可获得新的滤波结果</p>
+<p>N值的选取：流量N&#x3D;4；液面：N&#x3D;4<del>12；压力N&#x3D;4；温度,N&#x3D;1</del>4；</p>
+<p>优点：</p>
+<p>对周期性干扰有良好的一只作用，平滑度较高</p>
+<p>适用于高频振荡的系统</p>
+<p>缺点：</p>
+<p>灵敏度低</p>
+<p>对偶然出现的脉冲性干扰的抑制作用较差</p>
+<p>不易消除由于脉冲干扰所引起的采样值偏差</p>
+<p>不适用于脉冲干扰比较严重的场合</p>
+<p>比较浪费RAM</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#define N 12</span><br><span class="line"></span><br><span class="line">char value_buf[N];</span><br><span class="line">char i=0;</span><br><span class="line"></span><br><span class="line">char filter()</span><br><span class="line">&#123;</span><br><span class="line">   char count;</span><br><span class="line">   int  sum=0;</span><br><span class="line">   value_buf[i++] = get_ad();</span><br><span class="line">   if ( i == N )   i = 0;</span><br><span class="line">   for ( count=0;count&lt;N,count++)</span><br><span class="line">      sum = value_buf[count];</span><br><span class="line">   return (char)(sum/N);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="中位值平均滤波（防脉冲干扰平均滤波法）"><a href="#中位值平均滤波（防脉冲干扰平均滤波法）" class="headerlink" title="中位值平均滤波（防脉冲干扰平均滤波法）"></a>中位值平均滤波（防脉冲干扰平均滤波法）</h2><p>方法：</p>
+<p>连续N个数据，去掉一个最大值和一个最小值</p>
+<p>然后计算N-2个数据的算术平均值</p>
+<p>N值的选取：3~14</p>
+<p>优点：</p>
+<p>融合了中值滤波法和算术平均值滤波法的优点</p>
+<p>对于偶然出现的脉冲性干扰，可消除由于脉冲干扰所引起的采样值偏差</p>
+<p>缺点：</p>
+<p>测量速度较慢，和算术平均值滤波法一样</p>
+<p>比浪费RAM</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">#define N 12</span><br><span class="line"></span><br><span class="line">char filter()</span><br><span class="line">&#123;</span><br><span class="line">   char count,i,j;</span><br><span class="line">   char value_buf[N];</span><br><span class="line">   int  sum=0;</span><br><span class="line">   for  (count=0;count&lt;N;count++)</span><br><span class="line">   &#123;</span><br><span class="line">      value_buf[count] = get_ad();</span><br><span class="line">      delay();</span><br><span class="line">   &#125;</span><br><span class="line">   for (j=0;j&lt;N-1;j++)</span><br><span class="line">   &#123;</span><br><span class="line">      for (i=0;i&lt;N-j;i++)</span><br><span class="line">      &#123;</span><br><span class="line">         if ( value_buf[i]&gt;value_buf[i+1] )</span><br><span class="line">         &#123;</span><br><span class="line">            temp = value_buf[i];</span><br><span class="line">            value_buf[i] = value_buf[i+1]; </span><br><span class="line">             value_buf[i+1] = temp;</span><br><span class="line">         &#125;</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   for(count=1;count&lt;N-1;count++)</span><br><span class="line">      sum += value[count];</span><br><span class="line">   return (char)(sum/(N-2));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="限幅平均滤波法"><a href="#限幅平均滤波法" class="headerlink" title="限幅平均滤波法"></a>限幅平均滤波法</h2><p>方法：</p>
+<p>相当于限幅滤波法和递推平均滤波法</p>
+<p>每次采样到的新数据先进行限幅处理</p>
+<p>再送入队伍进行递推平均滤波处理</p>
+<p>优点：</p>
+<p>融合了两种滤波法的优点</p>
+<p>对于偶然出现的脉冲性干扰，可消除由于脉冲干扰所引起的采样值偏差</p>
+<p>缺点：比较浪费RAM</p>
+<h2 id="一阶滞后滤波法"><a href="#一阶滞后滤波法" class="headerlink" title="一阶滞后滤波法"></a>一阶滞后滤波法</h2><p>方法：</p>
+<p>取a&#x3D;0~1</p>
+<p>本次滤波结果&#x3D;（1-a）*本次采样结果+a *上次滤波结果</p>
+<p>优点：</p>
+<p>对于周期性干扰具有良好的抑制作用</p>
+<p>适用于波动频率较高的场合</p>
+<p>缺点：</p>
+<p>相位滞后灵敏度低</p>
+<p>滞后程度取决于a值大小</p>
+<p>不能消除滤波频率较高于采样频率的二分之一的干扰信号</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">/* 为加快程序处理速度假定基数为100，a=0~100 */</span><br><span class="line"></span><br><span class="line">#define a 50</span><br><span class="line">char value;</span><br><span class="line"></span><br><span class="line">char filter()</span><br><span class="line">&#123;</span><br><span class="line">   char  new_value;</span><br><span class="line">   new_value = get_ad();</span><br><span class="line">   return (100-a)*value + a*new_value; </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>加权递推平均滤波法</p>
+<p>方法：</p>
+<p>是对递推平均滤波法的改进，既不同时刻的数据加以不同的权</p>
+<p>通常是，越接近规则时刻的数据，权取的越大</p>
+<p>给予新采样值的权系数越大，则灵敏度越高，但信号平滑度越低</p>
+<p>优点：</p>
+<p>适用于有较大纯滞后时间常数的对象</p>
+<p>适用于采样周期较短的系统</p>
+<p>缺点：</p>
+<p>对于纯滞后时间常数较小，采样时间较长，变化较慢的信号，不能迅速反应系统当前所受 干扰的严重程度，滤波效果差</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">/* coe数组为加权系数表，存在程序存储区。*/</span><br><span class="line"></span><br><span class="line">#define N 12</span><br><span class="line"></span><br><span class="line">char code coe[N] = &#123;1,2,3,4,5,6,7,8,9,10,11,12&#125;;</span><br><span class="line">char code sum_coe = 1+2+3+4+5+6+7+8+9+10+11+12;</span><br><span class="line"></span><br><span class="line">char filter()</span><br><span class="line">&#123;</span><br><span class="line">   char count;</span><br><span class="line">   char value_buf[N];</span><br><span class="line">   int  sum=0;</span><br><span class="line">   for (count=0,count&lt;N;count++)</span><br><span class="line">   &#123;</span><br><span class="line">      value_buf[count] = get_ad();</span><br><span class="line">      delay();</span><br><span class="line">   &#125;</span><br><span class="line">   for (count=0,count&lt;N;count++)</span><br><span class="line">      sum += value_buf[count]*coe[count];</span><br><span class="line">   return (char)(sum/sum_coe);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="消抖滤波法"><a href="#消抖滤波法" class="headerlink" title="消抖滤波法"></a>消抖滤波法</h2><p>方法：</p>
+<p>设置一个滤波计数器</p>
+<p>将每次采样值与当前值比较</p>
+<p>如果采样值&#x3D;当前有效值，则计数器清零</p>
+<p>如果采样值&lt;&gt;当前有效值，则计数器加1，并判断计数器是否&gt;&#x3D;1上限N（溢出）</p>
+<p>如果计数器溢出，则将本次值替换当前有效值，并清计数器</p>
+<p>优点：</p>
+<p>对于变化缓慢的被测参数有较好的滤波效果</p>
+<p>可避免在临界值附近控制器的反复开&#x2F;关跳动或显示数值抖动</p>
+<p>缺点：</p>
+<p>对于快速变化的参数不宜</p>
+<p>如果在计数器溢出的那一次采样到的值恰好是干扰值，则会将干扰值当作有效值导入系统</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#define N 12</span><br><span class="line"></span><br><span class="line">char filter()</span><br><span class="line">&#123;</span><br><span class="line">   char count=0;</span><br><span class="line">   char new_value;</span><br><span class="line">   new_value = get_ad();</span><br><span class="line">   while (value !=new_value);</span><br><span class="line">   &#123;</span><br><span class="line">      count++;</span><br><span class="line">      if (count&gt;=N)   return new_value;</span><br><span class="line">       delay();</span><br><span class="line">      new_value = get_ad();</span><br><span class="line">   &#125;</span><br><span class="line">   return value;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="限幅消抖滤波法"><a href="#限幅消抖滤波法" class="headerlink" title="限幅消抖滤波法"></a>限幅消抖滤波法</h2><p>方法：</p>
+<p>相当于限幅滤波法+消抖滤波法</p>
+<p>先限幅后消抖</p>
+<p>优点：</p>
+<p>继承了限幅和消抖的优点</p>
+<p>改进了消抖滤波法中的某些缺陷，避免将干扰值导入系统</p>
+<p>缺点：</p>
+<p>对于快速变化的参数不宜</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://example.com">WayJay</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://example.com/2022/03/07/10%E7%A7%8D%E8%BD%AF%E4%BB%B6%E6%BB%A4%E6%B3%A2%E6%96%B9%E6%B3%95/">http://example.com/2022/03/07/10%E7%A7%8D%E8%BD%AF%E4%BB%B6%E6%BB%A4%E6%B3%A2%E6%96%B9%E6%B3%95/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a></div><div class="post_share"><div class="social-share" data-image="https://picsum.photos/id/318/300/300" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/03/17/%E8%8B%B1%E8%AF%AD%E6%98%93%E9%94%99%E9%9B%86/" title="英语易错集"><img class="cover" src="https://picsum.photos/id/553/300/300" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous</div><div class="prev_info">英语易错集</div></div></a></div><div class="next-post pull-right"><a href="/2022/02/24/%E5%88%9D%E8%AF%86C++/" title="初识C++"><img class="cover" src="https://picsum.photos/id/513/300/300" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next</div><div class="next_info">初识C++</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://img.wxcha.com/file/201808/31/9b99c1b0d7.jpg?down" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">WayJay</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">8</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/StarKang1" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://gitee.com/xu-weijian" target="_blank" title=""><i class="iconfont icon-gitee"></i></a><a class="social-icon" href="mailto:xwj1154176815@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E6%BB%A4%E6%B3%A2%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">软件滤波学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%90%E5%B9%85%E6%BB%A4%E6%B3%A2%E6%B3%95"><span class="toc-number">1.1.</span> <span class="toc-text">限幅滤波法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AD%E4%BD%8D%E5%80%BC%E6%BB%A4%E6%B3%A2%E6%B3%95"><span class="toc-number">1.2.</span> <span class="toc-text">中位值滤波法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E5%B9%B3%E5%9D%87%E6%BB%A4%E6%B3%A2%E6%B3%95"><span class="toc-number">1.3.</span> <span class="toc-text">算术平均滤波法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%92%E6%8E%A8%E5%B9%B3%E5%9D%87%E6%BB%A4%E6%B3%A2%E6%B3%95%EF%BC%88%E6%BB%91%E5%8A%A8%E5%B9%B3%E5%9D%87%E6%BB%A4%E6%B3%A2%E6%B3%95%EF%BC%89"><span class="toc-number">1.4.</span> <span class="toc-text">递推平均滤波法（滑动平均滤波法）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AD%E4%BD%8D%E5%80%BC%E5%B9%B3%E5%9D%87%E6%BB%A4%E6%B3%A2%EF%BC%88%E9%98%B2%E8%84%89%E5%86%B2%E5%B9%B2%E6%89%B0%E5%B9%B3%E5%9D%87%E6%BB%A4%E6%B3%A2%E6%B3%95%EF%BC%89"><span class="toc-number">1.5.</span> <span class="toc-text">中位值平均滤波（防脉冲干扰平均滤波法）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%90%E5%B9%85%E5%B9%B3%E5%9D%87%E6%BB%A4%E6%B3%A2%E6%B3%95"><span class="toc-number">1.6.</span> <span class="toc-text">限幅平均滤波法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E6%BB%9E%E5%90%8E%E6%BB%A4%E6%B3%A2%E6%B3%95"><span class="toc-number">1.7.</span> <span class="toc-text">一阶滞后滤波法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B6%88%E6%8A%96%E6%BB%A4%E6%B3%A2%E6%B3%95"><span class="toc-number">1.8.</span> <span class="toc-text">消抖滤波法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%90%E5%B9%85%E6%B6%88%E6%8A%96%E6%BB%A4%E6%B3%A2%E6%B3%95"><span class="toc-number">1.9.</span> <span class="toc-text">限幅消抖滤波法</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/16/Disable-specific-warnings-from-cpplint/" title="Disable specific warnings from cpplint"><img src="https://picsum.photos/id/88/300/300" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Disable specific warnings from cpplint"/></a><div class="content"><a class="title" href="/2022/04/16/Disable-specific-warnings-from-cpplint/" title="Disable specific warnings from cpplint">Disable specific warnings from cpplint</a><time datetime="2022-04-16T15:50:09.000Z" title="Created 2022-04-16 23:50:09">2022-04-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/16/C-%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B-%E5%9B%9B/" title="C++核心编程(四)"><img src="https://picsum.photos/id/76/300/300" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++核心编程(四)"/></a><div class="content"><a class="title" href="/2022/04/16/C-%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B-%E5%9B%9B/" title="C++核心编程(四)">C++核心编程(四)</a><time datetime="2022-04-16T12:57:54.000Z" title="Created 2022-04-16 20:57:54">2022-04-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/12/C-%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B-%E4%B8%89/" title="C++核心编程(三)"><img src="https://picsum.photos/id/100/300/300" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++核心编程(三)"/></a><div class="content"><a class="title" href="/2022/04/12/C-%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B-%E4%B8%89/" title="C++核心编程(三)">C++核心编程(三)</a><time datetime="2022-04-12T14:21:31.000Z" title="Created 2022-04-12 22:21:31">2022-04-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/12/C-%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B-%E4%BA%8C/" title="C++核心编程(二)"><img src="https://picsum.photos/id/345/300/300" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++核心编程(二)"/></a><div class="content"><a class="title" href="/2022/04/12/C-%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B-%E4%BA%8C/" title="C++核心编程(二)">C++核心编程(二)</a><time datetime="2022-04-11T16:11:39.000Z" title="Created 2022-04-12 00:11:39">2022-04-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/05/%E5%BC%80%E6%BA%90%E8%BD%BB%E9%87%8F%E6%98%BE%E7%A4%BA%E6%A1%86%E6%9E%B6lvgl/" title="开源轻量显示框架lvgl"><img src="https://w.wallhaven.cc/full/rd/wallhaven-rdwjj7.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="开源轻量显示框架lvgl"/></a><div class="content"><a class="title" href="/2022/04/05/%E5%BC%80%E6%BA%90%E8%BD%BB%E9%87%8F%E6%98%BE%E7%A4%BA%E6%A1%86%E6%9E%B6lvgl/" title="开源轻量显示框架lvgl">开源轻量显示框架lvgl</a><time datetime="2022-04-05T08:28:10.000Z" title="Created 2022-04-05 16:28:10">2022-04-05</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By WayJay</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
